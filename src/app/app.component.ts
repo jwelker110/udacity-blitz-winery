@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {RouterOutlet} from "@angular/router";
 
 import {NavComponent} from './nav/nav.component';
@@ -18,5 +18,29 @@ import {PageNotFoundComponent} from "./notfound/notfound.component";
     providers: [WinesService],
     precompile: [HomeComponent, AboutComponent, ContactComponent, WinesComponent, PageNotFoundComponent]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+    faIcons: {iClass: string, iUrl: string}[] = [];
+
+    constructor() {}
+
+    ngOnInit() {
+        this.faIcons = [
+            {
+                iClass: 'fa fa-twitter-square',
+                iUrl: '/'
+            },
+            {
+                iClass: 'fa fa-google-plus-square',
+                iUrl: '/'
+            },
+            {
+                iClass: 'fa fa-facebook-square',
+                iUrl: '/'
+            },
+            {
+                iClass: 'fa fa-youtube-square',
+                iUrl: '/'
+            }
+        ];
+    }
 }
