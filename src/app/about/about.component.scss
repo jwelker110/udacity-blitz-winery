@@ -1,0 +1,17 @@
+#bg-about {
+    background: url('http://placehold.it/1650x787') no-repeat center;
+}
+
+.story-tile {
+    height: 300px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@media screen and (max-width: 991px) {
+    .hideSmall {
+        display: none;
+    }
+}

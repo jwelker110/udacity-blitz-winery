@@ -1,0 +1,17 @@
+<div id="bg-wines" class="bg-main">
+    <div class="bg-main-inflate">
+        <h2>Our Wines</h2>
+        <p>
+            We always welcome visitors at our winery,
+            and we can also ship our wine to your door.
+        </p>
+        <a class="btn btn-default" routerLink="/contact" >Contact</a>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4" *ngFor="let product of products">
+            <wine-product [product]="product"></wine-product>
+        </div>
+    </div>
+</div>
