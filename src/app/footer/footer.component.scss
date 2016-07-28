@@ -14,7 +14,8 @@
 
   &.fa {
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: none;
     }
 
