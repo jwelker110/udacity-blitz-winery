@@ -3,15 +3,27 @@
 //
 // Variables
 // --------------------------------------------------
-$navbar-default-bg: #fff;
-$navbar-default-border: none;
-$navbar-default-link-color: #ad1d29;
-$navbar-default-link-hover-color: darken($navbar-default-link-color, 20%);
-$navbar-default-link-border: solid 2px transparent;
+$ub-red: #7d1921;
+$ub-ivory: #fffff0;
+$ub-black: #000;
+
+$navbar-default-bg: $ub-ivory;
+$navbar-default-link-color: $ub-red;
+$navbar-default-link-hover-color: $ub-black;
 $navbar-default-link-active-color: $navbar-default-link-hover-color;
+
+$navbar-default-border: none;
+$navbar-default-link-border: solid 2px transparent;
 $navbar-default-link-active-border: solid 2px $navbar-default-link-active-color;
 
 $navbar-default-brand-color: $navbar-default-link-active-color;
+
+$btn-default-bg: rgba(0, 0, 0, .5);
+$btn-default-border: $ub-ivory;
+$btn-default-color: $ub-ivory;
+$btn-border-radius-base: 0px;
+
+
 
 
 //== Colors
