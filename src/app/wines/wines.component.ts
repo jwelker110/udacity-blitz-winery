@@ -1,7 +1,6 @@
 import {Component, OnInit} from "@angular/core";
-import {WinesService} from "./wines.service";
 import {WineComponent} from "./wine.component";
-import {WineInterface} from "./wine.interface";
+import {WineModel} from "../model/wine.model";
 
 @Component({
     templateUrl: './wines.component.html',
@@ -9,18 +8,13 @@ import {WineInterface} from "./wine.interface";
     directives: [WineComponent]
 })
 export class WinesComponent implements OnInit {
-    products: WineInterface[] = [];
+    wineModel: WineModel;
 
-    constructor(private _winesService: WinesService) {
+    constructor(private _wineModel: WineModel) {
     }
 
     ngOnInit() {
-        this._winesService.getWines()
-            .then((products) => {
-                this.products = products;
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+        // so we can bind to the model directly
+        this.wineModel = this._wineModel;
     }
 }
