@@ -47,10 +47,30 @@ $hover-transition: color .5s;
 
 }
 
-
+.navbar-collapse {
+  max-height: 300px;
+  overflow-y: hidden;
+  transition: max-height .5s linear;
+}
 
 @media screen and (max-width: 768px) {
   .ub-collapse {
-    display: none;
+    max-height: 0;
+  }
+
+  .ub-toggled {
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .ub-toggled,
+  .navbar-toggle {
+    transition: box-shadow .5s;
+  }
+
+  .navbar-nav {
+
+    > li {
+      text-align: center;
+    }
   }
 }

@@ -28,17 +28,17 @@ export class NavComponent implements OnInit {
     }
 
     // TODO NEED TO CHANGE THE TIMEOUT FN USED
-    toggleCollapsed() {
+    toggleCollapsed = () => {
         if(this.to) {clearTimeout(this.to)}
         this.isCollapsed = !this.isCollapsed;
         if(this.isCollapsed) {return;}
         this.to = setTimeout(() => {
             this.isCollapsed = true;
         }, 3500);
-    }
+    };
 
-    collapse() {
+    collapse = () => {
         if(this.to) {clearTimeout(this.to)}
         this.isCollapsed = true;
-    }
+    };
 }
