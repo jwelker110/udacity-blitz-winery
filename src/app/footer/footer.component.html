@@ -1,5 +1,4 @@
 <div id="footer-container">
-    <a *ngFor="let i of [1, 2, 3, 4]" routerLink="/" class="social-icon">
-        <span class="fa fa-google-plus"></span>
+    <a *ngFor="let icon of faIcons" routerLink="{{icon.iUrl}}" class="social-icon {{icon.iClass}}">
     </a>
 </div>
