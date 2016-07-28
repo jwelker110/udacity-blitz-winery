@@ -44,11 +44,11 @@
             </div>
         </div>
     </div>
-    <div class="row" *ngIf="wineModel.featuredWines.length > 0">
+    <div class="row" *ngIf="(wineModel.featuredWines | products).length > 4">
         <div class="col-sm-12">
             <h2 class="content-title">Featured Wines</h2>
         </div>
-        <div class="col-sm-4" *ngFor="let product of wineModel.featuredWines">
+        <div class="col-sm-4" *ngFor="let product of wineModel.featuredWines | products">
             <wine-product [product]="product"></wine-product>
         </div>
     </div>

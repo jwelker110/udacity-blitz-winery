@@ -10,7 +10,7 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="col-sm-6 col-md-4" *ngFor="let product of wineModel.wines">
+        <div class="col-sm-6 col-md-4" *ngFor="let product of wineModel.wines | products">
             <wine-product [product]="product"></wine-product>
         </div>
     </div>
