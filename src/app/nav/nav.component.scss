@@ -53,13 +53,13 @@ $hover-transition: color .5s;
   transition: max-height .5s linear;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .ub-collapse {
     max-height: 0;
   }
 
   .ub-toggled {
-    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 1px 1px 1px 1px rgba(140, 169, 62, 0.4);
   }
 
   .ub-toggled,
