@@ -15,7 +15,9 @@
             </div>
             <div class="col-sm-6">
                 <div class="ub-modal-details">
-                    <h2>{{product.name}}</h2>
+                    <h2 class="ub-modal-title">{{product.name}}</h2>
+                    <h4 class="ub-modal-title">By <em>{{product.winemaker}}</em></h4>
+                    <p> This wine is best paired with <em>{{product.foodPairings | pairings}}</em>.</p>
 
                 </div>
             </div>
