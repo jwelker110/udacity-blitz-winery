@@ -6,12 +6,10 @@ import {WineInterface} from "../wines/wine.interface";
 export class ProductPipe implements PipeTransform {
 
     transform(value: any, args: string[]) : WineInterface[] {
-        console.log(value);
         let keys: WineInterface[] = [];
         for (let key in value) {
             keys.push(value[key]);
         }
-        console.log(keys);
         return keys;
     }
 }
