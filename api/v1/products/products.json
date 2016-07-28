@@ -1,5 +1,5 @@
-[
-  {
+{
+  "1": {
     "name": "Oakville Au Paradis",
     "category": "featured",
     "winemaker": "Peter Michael",
@@ -22,7 +22,7 @@
       "product_red_wine.png"
     ]
   },
-  {
+  "2": {
     "name": "Evening Land",
     "category": "featured",
     "winemaker": "Seven Springs",
@@ -44,7 +44,7 @@
       "product_clear_wine.png"
     ]
   },
-  {
+  "3": {
     "name": "Il Poggione",
     "category": "featured",
     "winemaker": "Montalcino",
@@ -67,7 +67,7 @@
       "product_green_wine.png"
     ]
   },
-  {
+  "4": {
     "name": "Sta Cruz Mountains",
     "category": "featured",
     "winemaker": "Mount Eden",
@@ -89,7 +89,7 @@
       "product_clear_wine.png"
     ]
   },
-  {
+  "5": {
     "name": "Del Duero",
     "category": "featured",
     "winemaker": "Bodegas Aalto",
@@ -112,7 +112,7 @@
       "product_red_wine.png"
     ]
   },
-  {
+  "6": {
     "name": "Klein",
     "category": "featured",
     "winemaker": "Vin de Constantia",
@@ -134,7 +134,7 @@
       "product_green_wine.png"
     ]
   },
-  {
+  "7": {
     "name": "Limerick Lane",
     "category": "featured",
     "winemaker": "Russian River Valley",
@@ -157,7 +157,7 @@
       "product_red_wine.png"
     ]
   },
-  {
+  "8": {
     "name": "Cloudy Bay",
     "category": "featured",
     "winemaker": " Marlborough",
@@ -179,7 +179,7 @@
       "product_green_wine.png"
     ]
   },
-  {
+  "9": {
     "name": "Gramercy Syrah",
     "category": "featured",
     "winemaker": "The Deuce",
@@ -202,7 +202,7 @@
       "product_clear_wine.png"
     ]
   },
-  {
+  "10": {
     "name": "Rioja",
     "category": "featured",
     "winemaker": "Bodegas Lan",
@@ -224,7 +224,7 @@
       "product_green_wine.png"
     ]
   },
-  {
+  "11": {
     "name": "Douro",
     "category": "featured",
     "winemaker": "Quinta Crastro",
@@ -247,7 +247,7 @@
       "product_clear_wine.png"
     ]
   },
-  {
+  "12": {
     "name": "Baer Ursa",
     "category": "featured",
     "winemaker": "Columbia Valley",
@@ -269,7 +269,7 @@
       "product_red_wine.png"
     ]
   },
-  {
+  "13": {
     "name": "Pomelo",
     "category": "featured",
     "winemaker": "Vina Montes",
@@ -292,7 +292,7 @@
       "product_red_wine.png"
     ]
   },
-  {
+  "14": {
     "name": "Rombauer",
     "category": "featured",
     "winemaker": "Carneros",
@@ -314,7 +314,7 @@
       "product_clear_wine.png"
     ]
   },
-  {
+  "15": {
     "name": "Calera",
     "category": "featured",
     "winemaker": "Central Coast",
@@ -337,4 +337,4 @@
       "product_green_wine.png"
     ]
   }
-]
+}
