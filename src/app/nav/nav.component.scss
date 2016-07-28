@@ -1,22 +1,18 @@
-$default-bg: #fff;
-$default-border: none;
-$default-link-color: #ad1d29;
 $default-link-hover-color: #000;
 $default-link-border: solid 2px transparent;
 $default-link-active-color: $default-link-hover-color;
 $default-link-active-border: solid 2px $default-link-active-color;
 
 $default-link-transition: border-bottom .5s;
-$default-link-active-transition: border-bottom .5s linear .5s !important;
+$default-link-active-transition: border-bottom .5s linear .5s, color .5s linear .5s !important;
+$hover-transition: color .5s;
+
 
 .navbar-default {
-  -webkit-box-shadow: 0px 0px 4px 0px #000;
-  -moz-box-shadow: 0px 0px 4px 0px #000;
   box-shadow: 0px 0px 4px 0px #000;
   padding: 10px 0;
 
   .navbar-brand {
-    color: $default-link-hover-color;
     font-size: 2em;
   }
 
@@ -26,32 +22,21 @@ $default-link-active-transition: border-bottom .5s linear .5s !important;
 
       > a {
         padding-bottom: 0px;
-        -webkit-transition: $default-link-transition;
-        -moz-transition: $default-link-transition;
-        -ms-transition: $default-link-transition;
-        -o-transition: $default-link-transition;
         transition: $default-link-transition;
         border-bottom: $default-link-border;
 
         &.active {
-          -webkit-transition: $default-link-active-transition;
-          -moz-transition: $default-link-active-transition;
-          -ms-transition: $default-link-active-transition;
-          -o-transition: $default-link-active-transition;
           transition: $default-link-active-transition;
           color: $default-link-active-color;
           border-bottom: $default-link-active-border;
+
           &:hover {
             cursor: default;
           }
         }
 
         &:hover {
-          -webkit-transition: color .5s;
-          -moz-transition: color .5s;
-          -ms-transition: color .5s;
-          -o-transition: color .5s;
-          transition: color .5s;
+          transition: $hover-transition;
         }
 
       }
