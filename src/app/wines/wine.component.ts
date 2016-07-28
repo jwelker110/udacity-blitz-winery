@@ -9,8 +9,12 @@ import {WineInterface} from "./wine.interface";
 })
 export class WineComponent {
     @Input()product: WineInterface;
+    isProductSelected: boolean = false;
 
     constructor() {
     }
 
+    setProductSelected = (isSelected: boolean) => {
+        this.isProductSelected = isSelected;
+    };
 }

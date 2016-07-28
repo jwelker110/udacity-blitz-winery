@@ -1,6 +1,24 @@
 <div class="product-tile">
-    <a class="product-link">
+    <!--TODO will be opening a modal with this link containing detailed info for the product-->
+    <a class="product-link" (click)="setProductSelected(true)">
         <img class="product-img" [src]="'public/img/' + product.productPhotos[0]" />
     </a>
     <h3 class="product-title">{{product.name}}</h3>
+</div>
+<div class="ub-modal" (click)="setProductSelected(false)" [ngClass]="{'ub-modal-visible': isProductSelected}" >
+    <div class="container">
+        <div class="row modal-bg">
+            <div class="col-sm-6">
+                <div class="ub-modal-tile">
+                    <img class="product-img" [src]="'public/img/' + product.productPhotos[0]" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="ub-modal-details">
+                    <h2>{{product.name}}</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

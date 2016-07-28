@@ -1,22 +1,73 @@
 .product {
 
+  &-tile {
+    text-align: center;
+  }
+
   &-link {
+    max-width: 320px;
     display: inline-block;
 
     &:hover {
       cursor: pointer;
 
+      &:active {
+        > img {
+          box-shadow: none;
+        }
+      }
+
       > img {
         box-shadow: 1px 1px 5px 5px #aaa;
       }
     }
+
   }
 
   &-img {
-    max-width: 100%;
+    max-width: 320px;
+    width: 100%;
   }
 
   &-title {
+    text-align: center;
+  }
+}
+
+.ub-modal {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  bottom: 0;
+  left: 150vw;
+  z-index: 999;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  overflow-y: scroll;
+  transition: left .75s;
+  background: rgba(0, 0, 0, 0);
+
+  .modal-bg {
+    background: rgba(255, 255, 240, 0.9);
+    box-shadow: 0 0 10px 1px #000;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .ub-modal-visible {
+
+  }
+
+  &-visible {
+    display: block;
+    left: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: left .75s, background .5s linear .8s;
+  }
+
+  &-tile {
+    padding: 5px;
     text-align: center;
   }
 }
