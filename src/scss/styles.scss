@@ -6,6 +6,7 @@
 @import "stylesheets/bootstrap";
 
 body {
+  background: #fffff0;
   padding-top: 70px;
   font: 16px/26px 'Playfair Display', serif;
 }
@@ -15,17 +16,20 @@ body {
 }
 
 .bg-main-inflate {
+  background: rgba(0, 0, 0, .2);
   position: relative;
   width: 100%;
   height: 450px;
 
   > .main-title {
+    margin-top:0px;
     position: absolute;
     text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    font-weight: bold;
+    color: #fffff0;
   }
 }
 
@@ -41,9 +45,12 @@ body {
 }
 
 .info-tile {
-
+  height: 100%;
+  background: rgba(0, 0, 0, .1);
 
   > p {
+    color: #fffff0;
+    font-size: 20px;
     top: 25%;
     position: absolute;
     left: 50%;
@@ -57,5 +64,15 @@ body {
     bottom: 25%;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+}
+
+.btn {
+  font-size: 18px;
+  border-width: 2px;
+
+  &:hover {
+    border-color: initial;
   }
 }
