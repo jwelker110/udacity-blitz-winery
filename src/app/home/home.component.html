@@ -37,22 +37,26 @@
             <div id="bg-order">
                 <div class="info-tile">
                     <p>
-                        Order online a case of our award-winning selections.
+                        Order a case of our award-winning selections online.
                     </p>
                     <a routerLink="/wines" class="btn btn-default">Order Our Wines</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" *ngIf="featuredProducts.length > 0">
         <div class="col-sm-12">
-            <h2>Featured Wines</h2>
+            <h2 class="content-title">Featured Wines</h2>
         </div>
         <div class="col-sm-4" *ngFor="let product of featuredProducts">
             <wine-product [product]="product"></wine-product>
         </div>
     </div>
     <div class="row">
-        <a routerLink="/wines" class="btn btn-default">See More Wine</a>
+        <div class="col-sm-12">
+            <div class="link-ribbon">
+                <a routerLink="/wines" class="btn btn-default">View All Products</a>
+            </div>
+        </div>
     </div>
 </div>
