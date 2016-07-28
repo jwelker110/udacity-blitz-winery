@@ -1,26 +1,21 @@
 import {Component, OnInit} from "@angular/core";
-
-import {WinesService} from '../wines/wines.service';
 import {ROUTER_DIRECTIVES} from "@angular/router";
+
 import {WineComponent} from "../wines/wine.component";
-import {WineInterface} from "../wines/wine.interface";
+import {WineModel} from "../model/wine.model";
 
 @Component({
     templateUrl: './home.component.html',
     styles: [require('./home.component.scss')],
-    directives: [WineComponent, ROUTER_DIRECTIVES],
-    providers: [WinesService]
+    directives: [WineComponent, ROUTER_DIRECTIVES]
 })
 export class HomeComponent implements OnInit {
-    featuredProducts: WineInterface[] = [];
+    wineModel: WineModel;
 
-    constructor(private _winesService: WinesService){}
+    constructor(private _wineModel: WineModel){}
 
     ngOnInit() {
-        this._winesService.getFeaturedWines()
-            .then((products) => this.featuredProducts = products)
-            .catch((err) => {
-                console.log(err);
-            });
+        // so we can bind to the model directly
+        this.wineModel = this._wineModel;
     }
 }
