@@ -9,13 +9,14 @@ import {WinesComponent} from "./wines/wines.component";
 import {FooterComponent} from "./footer/footer.component";
 import {WinesService} from "./wines/wines.service";
 import {PageNotFoundComponent} from "./notfound/notfound.component";
+import {WineModel} from "./model/wine.model";
 
 @Component({
     selector: 'ub-app',
     templateUrl: './app.component.html',
     styles: [require('./app.component.scss')],
     directives: [NavComponent, FooterComponent, RouterOutlet],
-    providers: [WinesService],
+    providers: [WinesService, WineModel],
     precompile: [HomeComponent, AboutComponent, ContactComponent, WinesComponent, PageNotFoundComponent]
 })
 export class AppComponent implements OnInit {
