@@ -1,5 +1,5 @@
 
-import {Component} from "@angular/core";
+import {Component, Input} from "@angular/core";
 import {ROUTER_DIRECTIVES} from "@angular/router";
 
 @Component({
@@ -9,5 +9,7 @@ import {ROUTER_DIRECTIVES} from "@angular/router";
     directives: [ROUTER_DIRECTIVES]
 })
 export class FooterComponent {
+    // font awesome icons to display
+    @Input()faIcons: {iClass: string, iUrl: string}[];
 
 }
