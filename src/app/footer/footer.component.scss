@@ -1,6 +1,14 @@
+$google-plus-color: #db4437;
+$facebook-color: #3b579d;
+$youtube-color: #e62117;
+$twitter-color: #2caae1;
+$envelope-color: #2b542c;
+$darken-pct: 25%;
+
 #footer-container {
   text-align: center;
   height: 100px;
+  margin-top: 20px;
 }
 
 .social-icon {
@@ -19,24 +27,40 @@
       text-decoration: none;
     }
 
-    &.fa-google-plus-square:hover {
-      color: #db4437;
+    &.fa-google-plus-square {
+      color: $google-plus-color;
+
+      &:hover {
+        color: darken($google-plus-color, $darken-pct);
+      }
     }
 
-    &.fa-facebook-square:hover {
-      color: #3b579d;
+    &.fa-facebook-square {
+      color: $facebook-color;
+
+      &:hover {
+        color: darken($facebook-color, $darken-pct);
+      }
     }
 
-    &.fa-youtube-square:hover {
-      color: #e62117;
+    &.fa-youtube-square {
+      color: $youtube-color;
+
+      &:hover {
+        color: darken($youtube-color, $darken-pct);
+      }
     }
 
-    &.fa-twitter-square:hover {
-      color: #2caae1;
+    &.fa-twitter-square {
+      color: $twitter-color;
+
+      &:hover {
+        color: darken($twitter-color, $darken-pct);
+      }
     }
 
-    &.fa-envelope-square:hover {
-      color: #2b542c;
+    &.fa-envelope-square {
+      color: $envelope-color;
     }
 
   }
