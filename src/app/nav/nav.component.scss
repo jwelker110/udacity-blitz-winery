@@ -1,4 +1,4 @@
-$default-link-hover-color: #000;
+$default-link-hover-color: #8CA93E;
 $default-link-border: solid 2px transparent;
 $default-link-active-color: $default-link-hover-color;
 $default-link-active-border: solid 2px $default-link-active-color;
@@ -14,6 +14,7 @@ $hover-transition: color .5s;
 
   .navbar-brand {
     font-size: 2em;
+    font-weight: bold;
   }
 
   .navbar-nav {
