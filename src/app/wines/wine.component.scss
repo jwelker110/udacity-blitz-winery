@@ -18,7 +18,8 @@
       }
 
       > img {
-        box-shadow: 1px 1px 5px 5px #aaa;
+        box-shadow: 1px 10px 5px -5px #aaa;
+        transition: box-shadow .2s;
       }
     }
 
@@ -27,6 +28,7 @@
   &-img {
     max-width: 320px;
     width: 100%;
+    border-radius: 3px;
   }
 
   &-title {
@@ -40,6 +42,7 @@
   right: 0;
   bottom: 0;
   left: 150vw;
+  min-width: 100%;
   z-index: 999;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -54,20 +57,27 @@
     margin-right: 0;
   }
 
-  .ub-modal-visible {
-
-  }
-
   &-visible {
     display: block;
     left: 0;
-    height: 100%;
     background: rgba(0, 0, 0, 0.5);
     transition: left .75s, background .5s linear .8s;
   }
 
   &-tile {
     padding: 5px;
+    text-align: center;
+
+    > img {
+      max-width: 280px;
+    }
+  }
+
+  &-details {
+
+  }
+
+  &-title {
     text-align: center;
   }
 }
