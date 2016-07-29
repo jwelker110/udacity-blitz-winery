@@ -8,7 +8,7 @@
 body {
   background: #fffff0;
   padding-top: 70px;
-  font: 16px/26px 'Playfair Display', serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .bg-main {
@@ -16,7 +16,7 @@ body {
 }
 
 .bg-main-inflate {
-  background: rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, .3);
   position: relative;
   width: 100%;
   height: 450px;
@@ -28,8 +28,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-weight: bold;
     color: #fffff0;
+    font-size: 4em;
+    width: 100%;
   }
 }
 
@@ -37,6 +38,7 @@ body {
 
   &-title {
     text-align: center;
+    margin: 30px auto;
   }
 
   &-text {
@@ -50,7 +52,7 @@ body {
 
   > p {
     color: #fffff0;
-    font-size: 20px;
+    font-size: 1.25em;
     top: 25%;
     position: absolute;
     left: 50%;
@@ -69,10 +71,23 @@ body {
 }
 
 .btn {
-  font-size: 18px;
+  font-size: 1.1em;
   border-width: 2px;
 
   &:hover {
     border-color: initial;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  // this was acting weird on a large viewport and
+  // displaying horizontal scrollbar
+  .navbar-right {
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
   }
 }
