@@ -1,6 +1,6 @@
 
 import {Component, OnInit} from "@angular/core";
-import {ROUTER_DIRECTIVES} from "@angular/router";
+import {ROUTER_DIRECTIVES, Router, NavigationEnd} from "@angular/router";
 
 @Component({
     selector: 'ub-nav',
@@ -11,10 +11,10 @@ import {ROUTER_DIRECTIVES} from "@angular/router";
 export class NavComponent implements OnInit {
     routes: {url: string, name: string}[];
     brand: string;
-    isCollapsed: boolean = true;
     to: any;
+    isCollapsed: boolean = true;
 
-    constructor(){
+    constructor(private _routerService: Router){
     }
 
     ngOnInit() {
@@ -24,7 +24,13 @@ export class NavComponent implements OnInit {
             {url: '/about', name: 'About'},
             {url: '/contact', name: 'Contact'}
         ];
-        this.brand = 'U&B';
+        this.brand = 'U&B Winery';
+        this._routerService.events.subscribe((e) => {
+            if(e instanceof NavigationEnd) {
+                window.scrollTo(0, 0);
+            }
+
+        });
     }
 
     // TODO NEED TO CHANGE THE TIMEOUT FN USED
