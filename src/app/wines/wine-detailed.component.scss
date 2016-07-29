@@ -1,0 +1,21 @@
+.detailed {
+
+  &-container {
+    margin: 10px auto;
+  }
+
+  &-left {
+    width: 30%;
+    display: inline-block;
+  }
+
+  &-right {
+    width: 69%;
+    display: inline-block;
+  }
+
+  &-img {
+    height: 150px;
+    max-width: 100%;
+  }
+}
