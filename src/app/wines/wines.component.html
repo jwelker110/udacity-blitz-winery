@@ -1,15 +1,20 @@
 <div id="bg-wines" class="bg-main">
     <div class="bg-main-inflate">
-        <h2>Our Wines</h2>
-        <p>
-            We always welcome visitors at our winery,
-            and we can also ship our wine to your door.
-        </p>
-        <a class="btn btn-default" routerLink="/contact" >Contact</a>
+        <div class="main-content">
+            <h1 class="main-content-title">Our Wines</h1>
+            <p class="main-content-text">
+                We always welcome visitors at our winery,
+                and we can ship our wine to your door.
+            </p>
+        </div>
     </div>
 </div>
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="(wineModel.wines | products).length > 0">
+        <div class="col-sm-12">
+            <h1 class="content-title">Peruse Our Selection</h1>
+            <h3 class="content-title"><em>Wines for every occasion</em></h3>
+        </div>
         <div class="col-sm-6 col-md-4" *ngFor="let product of wineModel.wines | products">
             <wine-product [product]="product"></wine-product>
         </div>
