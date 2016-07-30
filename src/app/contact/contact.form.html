@@ -1,23 +1,19 @@
-<div class="container" *ngIf="!isSubmitted">
-    <form (submit)="submitForm()" >
-        <h1 class="content-title">Write Us</h1>
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input id="name" type="text" class="form-control" name="name" required [(ngModel)]="name" />
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input id="email" type="email" class="form-control" name="email" required [(ngModel)]="email" />
-        </div>
-        <div class="form-group">
-            <label for="msg">Message</label>
-            <textarea id="msg" class="form-control" name="msg" required [(ngModel)]="msg"></textarea>
-        </div>
-        <div class="form-submit-container">
-            <button type="submit" class="btn btn-default">Submit</button>
-        </div>
-    </form>
-</div>
-<div class="container">
-    <h1 class="content-title" *ngIf="isSubmitted">Thank you for reaching out!</h1>
-</div>
+<form (submit)="submitForm()" *ngIf="!isSubmitted">
+    <h1 class="content-title">Write Us</h1>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" type="text" class="form-control" name="name" required [(ngModel)]="name" />
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" class="form-control" name="email" required [(ngModel)]="email" />
+    </div>
+    <div class="form-group">
+        <label for="msg">Message</label>
+        <textarea id="msg" class="form-control" name="msg" rows="4" required [(ngModel)]="msg"></textarea>
+    </div>
+    <div class="form-submit-container">
+        <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+</form>
+<h1 class="content-title" *ngIf="isSubmitted">Thank you for reaching out!</h1>
