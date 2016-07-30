@@ -14,7 +14,7 @@ export class ModalComponent {
     /**
      * Alert that the modal has been closed
      */
-    onModalClosed = () => {
+    modalClosed = () => {
         this.closed.emit(true);
     };
 
