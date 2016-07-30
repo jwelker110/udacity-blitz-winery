@@ -20,8 +20,8 @@ export class NavComponent implements OnInit {
     ngOnInit() {
         this.routes = [
             {url: '/', name: 'Home'},
-            {url: '/wines', name: 'Wines'},
             {url: '/about', name: 'About'},
+            {url: '/wines', name: 'Wines'},
             {url: '/contact', name: 'Contact'}
         ];
         this.brand = 'U&B Winery';
