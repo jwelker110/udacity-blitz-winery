@@ -1,0 +1,26 @@
+.modal-component {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  bottom: 0;
+  left: 150vw;
+  min-width: 100%;
+  z-index: 999;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  overflow-y: scroll;
+  transition: left .75s;
+  background: rgba(0, 0, 0, 0);
+
+  &-visible {
+    display: block;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transition: left .75s, background .5s linear .8s;
+  }
+
+  &-content {
+    position: relative;
+    height: 100%;
+  }
+}
