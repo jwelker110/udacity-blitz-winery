@@ -1,17 +1,18 @@
+/**
+ * Sticky footer per https://css-tricks.com/snippets/css/sticky-footer/
+ */
+:host {
+  display: block;
+  min-height: 100%;
+  margin-bottom: -120px;
+
+  &:after {
+    content: ".";
+    display: block;
+    height: 120px;
+  }
+}
+
 #bg-about {
-    background: url('/public/img/stock_photos/bg-about.jpg') no-repeat center;
-}
-
-.story-tile {
-    height: 300px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-@media screen and (max-width: 991px) {
-    .hideSmall {
-        display: none;
-    }
+  background: url('/public/img/stock_photos/bg-about.jpg') no-repeat center;
 }
