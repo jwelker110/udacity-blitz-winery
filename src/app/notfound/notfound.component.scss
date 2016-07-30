@@ -1,43 +1,22 @@
-* {
-    line-height: 1.2;
-    margin: 0;
+/**
+ * Sticky footer per https://css-tricks.com/snippets/css/sticky-footer/
+ */
+:host {
+  display: block;
+  min-height: 100%;
+  margin-bottom: -120px;
+
+  &:after {
+    content: ".";
+    display: block;
+    height: 120px;
+  }
 }
 
-html {
-    color: #888;
-    display: table;
-    font-family: sans-serif;
-    height: 100%;
-    text-align: center;
-    width: 100%;
-}
+.ub-anchor {
+  color: #7d1921;
 
-body {
-    display: table-cell;
-    vertical-align: middle;
-    margin: 2em auto;
-}
-
-h1 {
-    color: #555;
-    font-size: 2em;
-    font-weight: 400;
-}
-
-p {
-    margin: 0 auto;
-    width: 280px;
-}
-
-@media only screen and (max-width: 280px) {
-
-    body, p {
-        width: 95%;
-    }
-
-    h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
-    }
-
+  &:hover {
+    text-decoration: underline;
+  }
 }
