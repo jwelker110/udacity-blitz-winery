@@ -5,10 +5,38 @@
 // Import Bootstrap for Sass
 @import "stylesheets/bootstrap";
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   background: #fffff0;
   padding-top: 70px;
   font-family: 'Raleway', sans-serif;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading {
+  position: absolute;
+  top: calc(50% - 70px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: loading;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .bg-main {
