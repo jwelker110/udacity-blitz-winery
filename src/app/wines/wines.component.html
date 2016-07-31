@@ -1,22 +1,37 @@
 <div id="bg-wines" class="bg-main">
     <div class="bg-main-inflate">
         <div class="main-content">
-            <h1 class="main-content-title">Our Wines</h1>
-            <p class="main-content-text">
-                We always welcome visitors at our winery,
-                and we can ship our wine to your door.
-            </p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                        <h1 class="main-content-title">Our Wines</h1>
+                        <p class="main-content-text">
+                            Our tasting room is located in the historic Erie Watermill
+                            Building on the southside of E Broadway. Open daily right
+                            here on the web.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row" *ngIf="(wineModel.wines | products).length > 0">
-        <div class="col-sm-12">
+        <div class="col-xs-12">
             <h1 class="content-title">Peruse Our Selection</h1>
             <h3 class="content-title"><em>Wines for every occasion</em></h3>
         </div>
-        <div class="col-sm-6 col-md-4" *ngFor="let product of wineModel.wines | products">
-            <wine-product [product]="product"></wine-product>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let product of wineModel.wines | products; let i = index">
+            <div class="col-sm-4 col-lg-3">
+                <wine-detailed [wine]="product"></wine-detailed>
+            </div>
+            <div *ngIf="i > 0 && (i+1) % 4 == 0" class="clearfix visible-lg-block"></div>
+            <div *ngIf="i > 0 && (i+1) % 3 == 0" class="clearfix visible-md-block"></div>
         </div>
     </div>
 </div>
