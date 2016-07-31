@@ -10,14 +10,16 @@ import {FooterComponent} from "./footer/footer.component";
 import {WinesService} from "./wines/wines.service";
 import {PageNotFoundComponent} from "./notfound/notfound.component";
 import {WineModel} from "./model/wine.model";
+import {ShoppingCart} from "./cart/cart.service";
+import {CartComponent} from "./cart/cart.component";
 
 @Component({
     selector: 'ub-app',
     templateUrl: './app.component.html',
     styles: [require('./app.component.scss')],
     directives: [NavComponent, FooterComponent, RouterOutlet],
-    providers: [WinesService, WineModel],
-    precompile: [HomeComponent, AboutComponent, ContactComponent, WinesComponent, PageNotFoundComponent]
+    providers: [WinesService, WineModel, ShoppingCart],
+    precompile: [HomeComponent, AboutComponent, ContactComponent, WinesComponent, PageNotFoundComponent, CartComponent]
 })
 export class AppComponent implements OnInit {
     faIcons: {iClass: string, iUrl: string}[] = [];
