@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
-import {WineComponent} from "./wine.component";
-import {WineDetailedComponent} from "./wine-detailed.component";
+import {WineComponent} from "../../components/wine/wine.component";
+import {WineDetailedComponent} from "../../components/wine/wine-detailed.component";
 import { ProductPipe } from "../../pipes/product.pipe";
 import { WineModel } from "../../models/wine.model";
 
