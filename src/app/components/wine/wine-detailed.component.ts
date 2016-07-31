@@ -3,7 +3,7 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import {WineInterface} from './wine.interface';
 import { ArrayToStringPipe } from "../../pipes/array-string.pipe";
-import { ShoppingCart } from "../../components/cart/cart.service";
+import { ShoppingCart } from "../cart/cart.service";
 
 @Component({
     selector: 'wine-detailed',
