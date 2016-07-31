@@ -7,11 +7,11 @@ import {AboutComponent} from "./features/about/about.component";
 import {ContactComponent} from "./features/contact/contact.component";
 import {WinesComponent} from "./features/wines/wines.component";
 import {FooterComponent} from "./components/footer/footer.component";
-import {WinesService} from "./features/wines/wines.service";
+import {WinesService} from "./components/wine/wines.service";
 import {PageNotFoundComponent} from "./features/notfound/notfound.component";
 import {WineModel} from "./models/wine.model";
 import {ShoppingCart} from "./components/cart/cart.service";
-import {CartComponent} from "./components/cart/cart.component";
+import {CartComponent} from "./features/cart/cart.component";
 
 @Component({
     selector: 'ub-app',
