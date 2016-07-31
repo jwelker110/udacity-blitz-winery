@@ -1,5 +1,4 @@
 <div class="product-tile">
-    <!--TODO will be opening a modal with this link containing detailed info for the product-->
     <a class="product-link" (click)="setProductSelected(true)">
         <img class="product-img" [src]="'public/img/' + product.productPhotos[0]" />
     </a>
@@ -7,18 +6,13 @@
 </div>
 <modal [show]="isProductSelected" (closed)="setProductSelected(false)">
     <div class="container ub-modal-container">
-        <div class="row ub-modal-bg">
-            <div class="col-sm-6">
-                <div class="ub-modal-tile">
-                    <img class="product-img" [src]="'public/img/' + product.productPhotos[0]" />
-                </div>
-            </div>
-            <div class="col-sm-6">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 ub-modal-bg">
                 <div class="ub-modal-details">
                     <h2 class="ub-modal-title">{{product.name}}</h2>
                     <h4 class="ub-modal-title">By <em>{{product.winemaker}}</em></h4>
+                    <p>{{product.tastingNotes}}</p>
                     <p> This wine is best paired with <em>{{product.foodPairings | arrayToString | lowercase}}</em>.</p>
-
                 </div>
             </div>
         </div>
