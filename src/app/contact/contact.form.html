@@ -1,4 +1,4 @@
-<form (submit)="submitForm()" *ngIf="!isSubmitted">
+<form (ngSubmit)="submitForm()" *ngIf="!isSubmitted" #contactForm="ngForm">
     <h1 class="content-title">Write Us</h1>
     <div class="form-group">
         <label for="name">Name</label>
@@ -13,7 +13,7 @@
         <textarea id="msg" class="form-control" name="msg" rows="4" required [(ngModel)]="msg"></textarea>
     </div>
     <div class="form-submit-container">
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn ub-btn-red" [disabled]="!contactForm.form.valid" [ngClass]="{'ub-btn-green': contactForm.form.valid}">Submit</button>
     </div>
 </form>
-<h1 class="content-title" *ngIf="isSubmitted">Thank you for reaching out!</h1>
+<h3 class="content-title" *ngIf="isSubmitted">Thank you!</h3>
