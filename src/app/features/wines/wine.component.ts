@@ -1,8 +1,8 @@
 import {Component, Input} from "@angular/core";
 
 import {WineInterface} from "./wine.interface";
-import {ArrayToStringPipe} from "../pipe/array-string.pipe";
-import {ModalComponent} from "../modal/modal.component";
+import { ModalComponent } from "../../components/modal/modal.component";
+import { ArrayToStringPipe } from "../../pipes/array-string.pipe";
 
 @Component({
     selector: 'wine-product',

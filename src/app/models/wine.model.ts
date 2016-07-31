@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {WinesService} from "../wines/wines.service";
-import {WineInterface} from "../wines/wine.interface";
+import {WinesService} from "../features/wines/wines.service";
+import {WineInterface} from "../features/wines/wine.interface";
 
 @Injectable()
 export class WineModel {

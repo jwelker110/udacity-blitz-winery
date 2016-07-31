@@ -2,8 +2,8 @@ import {Component, Output, Input, EventEmitter} from "@angular/core";
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import {WineInterface} from './wine.interface';
-import {ArrayToStringPipe} from "../pipe/array-string.pipe";
-import {ShoppingCart} from "../cart/cart.service";
+import { ArrayToStringPipe } from "../../pipes/array-string.pipe";
+import { ShoppingCart } from "../../components/cart/cart.service";
 
 @Component({
     selector: 'wine-detailed',

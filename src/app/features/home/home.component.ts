@@ -2,8 +2,8 @@ import {Component, OnInit} from "@angular/core";
 import {ROUTER_DIRECTIVES} from "@angular/router";
 
 import {WineComponent} from "../wines/wine.component";
-import {WineModel} from "../model/wine.model";
-import {ProductPipe} from "../pipe/product.pipe";
+import { ProductPipe } from "../../pipes/product.pipe";
+import { WineModel } from "../../models/wine.model";
 
 @Component({
     templateUrl: './home.component.html',

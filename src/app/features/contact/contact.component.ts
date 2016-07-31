@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 
 import {ContactForm} from "./contact.form";
-import {MapComponent} from "../map/map.component";
+import { MapComponent } from "../../components/map/map.component";
 
 @Component({
     templateUrl: './contact.component.html',

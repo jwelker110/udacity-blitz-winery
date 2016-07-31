@@ -1,5 +1,5 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {WineInterface} from "../wines/wine.interface";
+import {WineInterface} from "../features/wines/wine.interface";
 
 // http://stackoverflow.com/questions/35534959/access-key-and-value-of-object-using-ngfor
 @Pipe({name: 'products'})

@@ -1,8 +1,8 @@
 import {Component, OnInit} from "@angular/core";
 import {WineComponent} from "./wine.component";
-import {WineModel} from "../model/wine.model";
-import {ProductPipe} from "../pipe/product.pipe";
 import {WineDetailedComponent} from "./wine-detailed.component";
+import { ProductPipe } from "../../pipes/product.pipe";
+import { WineModel } from "../../models/wine.model";
 
 @Component({
     templateUrl: './wines.component.html',

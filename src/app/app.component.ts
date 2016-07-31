@@ -1,17 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 import {RouterOutlet} from "@angular/router";
 
-import {NavComponent} from './nav/nav.component';
-import {HomeComponent} from "./home/home.component";
-import {AboutComponent} from "./about/about.component";
-import {ContactComponent} from "./contact/contact.component";
-import {WinesComponent} from "./wines/wines.component";
-import {FooterComponent} from "./footer/footer.component";
-import {WinesService} from "./wines/wines.service";
-import {PageNotFoundComponent} from "./notfound/notfound.component";
-import {WineModel} from "./model/wine.model";
-import {ShoppingCart} from "./cart/cart.service";
-import {CartComponent} from "./cart/cart.component";
+import {NavComponent} from './components/nav/nav.component';
+import {HomeComponent} from "./features/home/home.component";
+import {AboutComponent} from "./features/about/about.component";
+import {ContactComponent} from "./features/contact/contact.component";
+import {WinesComponent} from "./features/wines/wines.component";
+import {FooterComponent} from "./components/footer/footer.component";
+import {WinesService} from "./features/wines/wines.service";
+import {PageNotFoundComponent} from "./features/notfound/notfound.component";
+import {WineModel} from "./models/wine.model";
+import {ShoppingCart} from "./components/cart/cart.service";
+import {CartComponent} from "./components/cart/cart.component";
 
 @Component({
     selector: 'ub-app',
