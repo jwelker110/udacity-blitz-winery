@@ -1,25 +1,28 @@
 import {Component, Output, Input, EventEmitter} from "@angular/core";
+import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import {WineInterface} from './wine.interface';
+import {ArrayToStringPipe} from "../pipe/array-string.pipe";
+import {ShoppingCart} from "../cart/cart.service";
 
 @Component({
     selector: 'wine-detailed',
     templateUrl: './wine-detailed.component.html',
-    styles: [require('./wine-detailed.component.scss')]
+    styles: [require('./wine-detailed.component.scss')],
+    pipes: [ArrayToStringPipe],
+    directives: [ROUTER_DIRECTIVES]
 })
 export class WineDetailedComponent {
-    @Output() addedToCart: EventEmitter<any> = new EventEmitter<any>();
     @Input() wine: WineInterface;
 
-    constructor() {}
+    constructor(private _shoppingCart: ShoppingCart) {}
 
     /**
      * This will emit the event that can be captured by
      * the shopping cart (if implemented)
      */
-    addToCart = () => {
-        if(!this.wine) {return;}
-        this.addedToCart.emit(this.wine);
+    addToCart = (item: any) => {
+        this._shoppingCart.addItem(item, 1);
     }
 
 
