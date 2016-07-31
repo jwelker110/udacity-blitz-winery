@@ -1,6 +1,6 @@
 
 import {Component, OnInit} from "@angular/core";
-import {ShoppingCart} from "./cart.service";
+import {ShoppingCart} from "../../components/cart/cart.service";
 
 @Component({
     templateUrl: './cart.component.html',

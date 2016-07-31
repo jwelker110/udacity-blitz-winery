@@ -1,7 +1,7 @@
 import {Component, Input} from "@angular/core";
 
-import {WineInterface} from "./wine.interface";
-import { ModalComponent } from "../../components/modal/modal.component";
+import {WineInterface} from "../../features/wines/wine.interface";
+import { ModalComponent } from "../modal/modal.component";
 import { ArrayToStringPipe } from "../../pipes/array-string.pipe";
 
 @Component({
