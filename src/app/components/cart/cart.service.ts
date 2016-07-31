@@ -6,7 +6,9 @@ import {CartItem, ProductInterface} from "./cart-item";
 export class ShoppingCart {
     items: CartItem[] = [];
 
-    constructor() {}
+    constructor() {
+        this.restoreCart();
+    }
 
     /**
      * Add an item to the shopping cart
@@ -14,7 +16,6 @@ export class ShoppingCart {
      * @param quantity -
      */
     addItem = (item: ProductInterface, quantity: number) => {
-        console.log(item);
         quantity = Math.round(quantity);
 
         let tmpItem = this.getItemFromCart(item);
@@ -22,10 +23,11 @@ export class ShoppingCart {
         if(tmpItem == null) {
             // the item isn't in the cart so let's add it
             this.items[item.key] = new CartItem(item, quantity);
-            console.log(this.items);
+            this.storeCart();
             return;
         }
         tmpItem.changeQuantityBy(quantity);
+        this.storeCart();
     };
 
     removeItem = (item: ProductInterface) => {
@@ -40,6 +42,7 @@ export class ShoppingCart {
         if(!i) {return;}
         // remove it
         this.items.splice(i, 1);
+        this.storeCart();
     };
 
     getItemFromCart = (item: ProductInterface) => {
@@ -52,6 +55,7 @@ export class ShoppingCart {
 
     itemInCart = (key: string) => {
         let match = this.items.filter(function(value: CartItem, index: number, arr: CartItem[]) {
+            if(!value) {return;}
             return value.Product.key == key;
         });
         return match.length > 0;
@@ -60,6 +64,7 @@ export class ShoppingCart {
     getCartSubtotal = () => {
         let sub = 0;
         this.items.forEach(function(value: CartItem) {
+            if(!value) {return;}
             sub += value.subtotal();
         });
         return sub;
@@ -68,9 +73,29 @@ export class ShoppingCart {
     getCartItemCount = () => {
         let count = 0;
         this.items.forEach(function(value: CartItem) {
+            if(!value) {return;}
             count += value.Quantity;
         });
         return count;
+    };
+
+    storeCart = () => {
+        localStorage.setItem('ub-winery-cart', JSON.stringify(this.items));
+    };
+
+    restoreCart = () => {
+        let stored = localStorage.getItem('ub-winery-cart');
+        if (!stored) {return;}
+        let cart = JSON.parse(stored);
+        if(cart) {
+            cart.forEach((value: CartItem, index: number, arr: any[]) => {
+                if(!value) {
+                    this.items[index] = value;
+                    return;
+                }
+                this.items[index] = new CartItem(value.Product, value.Quantity);
+            });
+        }
     };
 
 }
