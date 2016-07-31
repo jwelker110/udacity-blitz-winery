@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {ROUTER_DIRECTIVES} from "@angular/router";
 
-import {WineComponent} from "../wines/wine.component";
+import {WineComponent} from "../../components/wine/wine.component";
 import { ProductPipe } from "../../pipes/product.pipe";
 import { WineModel } from "../../models/wine.model";
 
