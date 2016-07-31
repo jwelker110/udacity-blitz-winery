@@ -1,10 +1,11 @@
 import {Injectable} from '@angular/core';
 import {WinesService} from "../wines/wines.service";
+import {WineInterface} from "../wines/wine.interface";
 
 @Injectable()
 export class WineModel {
-    featuredWines: any;
-    wines: any;
+    featuredWines: WineInterface[];
+    wines: WineInterface[];
 
     constructor(private _winesService: WinesService) {
         this.init()
