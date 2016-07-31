@@ -1,0 +1,35 @@
+/**
+ * Sticky footer per https://css-tricks.com/snippets/css/sticky-footer/
+ */
+:host {
+  display: block;
+  min-height: 100%;
+  margin-bottom: -120px;
+
+  &:after {
+    content: ".";
+    display: block;
+    height: 120px;
+  }
+}
+
+.subtotal-container {
+  width: 100px;
+  text-align: right;
+}
+
+.cart {
+
+  &-name {
+    min-width: 140px;
+  }
+
+  &-quantity {
+    min-width: 60px;
+  }
+
+  &-subtotal {
+    min-width: 100px;
+  }
+
+}

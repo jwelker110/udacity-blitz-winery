@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of shoppingCart.items">
+            <th class="cart-name" *ngIf="item">{{item.Product.name}}</th>
+            <th class="cart-quantity" *ngIf="item">{{item.Quantity}}</th>
+            <th class="cart-subtotal" *ngIf="item">$<span class="subtotal-container">{{item.subtotal()}}</span></th>
+        </tr>
+    </tbody>
+</table>
