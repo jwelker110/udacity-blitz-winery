@@ -1,11 +1,12 @@
 {
   "1": {
     "name": "Oakville Au Paradis",
+    "countryOfOrigin": "United States",
     "category": "featured",
     "winemaker": "Peter Michael",
     "tasteSummary": [
       "toasty",
-      " bold ",
+      " bold",
       " oak"
     ],
     "foodPairings": [
@@ -13,9 +14,11 @@
       "pastas",
       "vegetarian"
     ],
-    "tastingNotes": "Merlot is a unique drinkable wine created in partnership with John Doe.Its bright cherry color and subtle notes of toasty spice are a result of aging in a combination of American and French oak barrels.Rich tannins make our Merlot a perfect match with a range of main courses including meats,pastas and vegetarian dishes.",
-    "wineType": "Red Wine",
+    "tastingNotes": "Merlot is a unique drinkable wine created in partnership with John Doe. Its bright cherry color and subtle notes of toasty spice are a result of aging in a combination of American and French oak barrels.Rich tannins make our Merlot a perfect match with a range of main courses including meats,pastas and vegetarian dishes.",
+    "wineType": "Merlot",
     "alcoholByVolume": 13.5,
+    "price": 39.95,
+    "rating": "Best",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -24,20 +27,23 @@
   },
   "2": {
     "name": "Evening Land",
+    "countryOfOrigin": "United States",
     "category": "featured",
     "winemaker": "Seven Springs",
     "tasteSummary": [
       "dry",
-      " bold "
+      " bold"
     ],
     "foodPairings": [
       "meats",
       "beef wellington",
       "korean-style beef stir fried in garlic"
     ],
-    "tastingNotes": "Cabernet Sauvignon is one of the most widely recognized red wine grape varieties. It is grown in nearly every major wine producing country among a diverse spectrum of climates from Canada's Okanagan Valley to Lebanon's Beqaa Valley.",
-    "wineType": "Red Wine",
+    "tastingNotes": "Cabernet Sauvignon is one of the world's most widely recognized red wine grape varieties. It is grown in nearly every major wine producing country among a diverse spectrum of climates from Canada's Okanagan Valley to Lebanon's Beqaa Valley",
+    "wineType": "Pinot Noir",
     "alcoholByVolume": 14.5,
+    "price": 25.50,
+    "rating": "Good",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -46,11 +52,12 @@
   },
   "3": {
     "name": "Il Poggione",
+    "countryOfOrigin": "Italy",
     "category": "featured",
     "winemaker": "Montalcino",
     "tasteSummary": [
       "notes of vanilla",
-      " sweet spices ",
+      " sweet spices",
       " buttery"
     ],
     "foodPairings": [
@@ -61,6 +68,8 @@
     "tastingNotes": "Chardonnay is a green-skinned grape variety used to make white wine. It originated in the Burgundy wine region of eastern France, but is now grown wherever wine is produced, from England to New Zealand.",
     "wineType": "White Wine",
     "alcoholByVolume": 13.5,
+    "price": 20.99,
+    "rating": "Best",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [

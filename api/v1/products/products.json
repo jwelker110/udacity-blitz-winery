@@ -1,6 +1,7 @@
 {
   "1": {
     "name": "Oakville Au Paradis",
+    "countryOfOrigin": "United States",
     "category": "featured",
     "winemaker": "Peter Michael",
     "tasteSummary": [
@@ -13,9 +14,11 @@
       "pastas",
       "vegetarian"
     ],
-    "tastingNotes": "Merlot is a unique drinkable wine created in partnership with John Doe.Its bright cherry color and subtle notes of toasty spice are a result of aging in a combination of American and French oak barrels.Rich tannins make our Merlot a perfect match with a range of main courses including meats,pastas and vegetarian dishes.",
+    "tastingNotes": "Merlot is a unique drinkable wine created in partnership with John Doe. Its bright cherry color and subtle notes of toasty spice are a result of aging in a combination of American and French oak barrels.Rich tannins make our Merlot a perfect match with a range of main courses including meats,pastas and vegetarian dishes.",
     "wineType": "Merlot",
     "alcoholByVolume": 13.5,
+    "price": 39.95,
+    "rating": "Best",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -24,6 +27,7 @@
   },
   "2": {
     "name": "Evening Land",
+    "countryOfOrigin": "United States",
     "category": "featured",
     "winemaker": "Seven Springs",
     "tasteSummary": [
@@ -38,6 +42,8 @@
     "tastingNotes": "Cabernet Sauvignon is one of the world's most widely recognized red wine grape varieties. It is grown in nearly every major wine producing country among a diverse spectrum of climates from Canada's Okanagan Valley to Lebanon's Beqaa Valley",
     "wineType": "Pinot Noir",
     "alcoholByVolume": 14.5,
+    "price": 25.50,
+    "rating": "Good",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -46,6 +52,7 @@
   },
   "3": {
     "name": "Il Poggione",
+    "countryOfOrigin": "Italy",
     "category": "featured",
     "winemaker": "Montalcino",
     "tasteSummary": [
@@ -61,6 +68,8 @@
     "tastingNotes": "Chardonnay is a green-skinned grape variety used to make white wine. It originated in the Burgundy wine region of eastern France, but is now grown wherever wine is produced, from England to New Zealand.",
     "wineType": "White Wine",
     "alcoholByVolume": 13.5,
+    "price": 20.99,
+    "rating": "Best",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -68,7 +77,8 @@
     ]
   },
   "4": {
-    "name": "Sta Cruz Mountains",
+    "name": "Santa Cruz Mountains",
+    "countryOfOrigin": "United States",
     "category": "featured",
     "winemaker": "Mount Eden",
     "tasteSummary": [
@@ -83,6 +93,8 @@
     "tastingNotes": "Cabernet Sauvignon is one of the world's most widely recognized red wine grape varieties. It is grown in nearly every major wine producing country among a diverse spectrum of climates from Canada's Okanagan Valley to Lebanon's Beqaa Valley",
     "wineType": "Red Wine",
     "alcoholByVolume": 14.5,
+    "price": 39.95,
+    "rating": "Good",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -91,6 +103,7 @@
   },
   "5": {
     "name": "Del Duero",
+    "countryOfOrigin": "Spain",
     "category": "featured",
     "winemaker": "Bodegas Aalto",
     "tasteSummary": [
@@ -106,6 +119,8 @@
     "tastingNotes": "Chardonnay is a green-skinned grape variety used to make white wine. It originated in the Burgundy wine region of eastern France, but is now grown wherever wine is produced, from England to New Zealand.",
     "wineType": "White Wine",
     "alcoholByVolume": 13.5,
+    "price": 20.99,
+    "rating": "Better",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -114,6 +129,7 @@
   },
   "6": {
     "name": "Klein",
+    "countryOfOrigin": "South Africa",
     "category": "featured",
     "winemaker": "Vin de Constantia",
     "tasteSummary": [
@@ -128,6 +144,8 @@
     "tastingNotes": "Cabernet Sauvignon is one of the world's most widely recognized red wine grape varieties. It is grown in nearly every major wine producing country among a diverse spectrum of climates from Canada's Okanagan Valley to Lebanon's Beqaa Valley",
     "wineType": "Red Wine",
     "alcoholByVolume": 14.5,
+    "price": 20.99,
+    "rating": "Better",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -136,6 +154,7 @@
   },
   "7": {
     "name": "Limerick Lane",
+    "countryOfOrigin": "United States",
     "category": "featured",
     "winemaker": "Russian River Valley",
     "tasteSummary": [
@@ -151,6 +170,8 @@
     "tastingNotes": "Chardonnay is a green-skinned grape variety used to make white wine. It originated in the Burgundy wine region of eastern France, but is now grown wherever wine is produced, from England to New Zealand.",
     "wineType": "White Wine",
     "alcoholByVolume": 13.5,
+    "price": 34.99,
+    "rating": "Better",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -159,6 +180,7 @@
   },
   "8": {
     "name": "Cloudy Bay",
+    "countryOfOrigin": "New Zealand",
     "category": "featured",
     "winemaker": " Marlborough",
     "tasteSummary": [
@@ -173,6 +195,8 @@
     "tastingNotes": "Cabernet Sauvignon is one of the world's most widely recognized red wine grape varieties. It is grown in nearly every major wine producing country among a diverse spectrum of climates from Canada's Okanagan Valley to Lebanon's Beqaa Valley",
     "wineType": "Red Wine",
     "alcoholByVolume": 14.5,
+    "price": 39.95,
+    "rating": "Better",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -181,6 +205,7 @@
   },
   "9": {
     "name": "Gramercy Syrah",
+    "countryOfOrigin": "United States",
     "category": "featured",
     "winemaker": "The Deuce",
     "tasteSummary": [
@@ -196,6 +221,8 @@
     "tastingNotes": "Chardonnay is a green-skinned grape variety used to make white wine. It originated in the Burgundy wine region of eastern France, but is now grown wherever wine is produced, from England to New Zealand.",
     "wineType": "White Wine",
     "alcoholByVolume": 13.5,
+    "price": 20.99,
+    "rating": "Better",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -204,6 +231,7 @@
   },
   "10": {
     "name": "Rioja",
+    "countryOfOrigin": "Spain",
     "category": "featured",
     "winemaker": "Bodegas Lan",
     "tasteSummary": [
@@ -218,6 +246,8 @@
     "tastingNotes": "Cabernet Sauvignon is one of the world's most widely recognized red wine grape varieties. It is grown in nearly every major wine producing country among a diverse spectrum of climates from Canada's Okanagan Valley to Lebanon's Beqaa Valley",
     "wineType": "Red Wine",
     "alcoholByVolume": 14.5,
+    "price": 25.50,
+    "rating": "Best",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -226,6 +256,7 @@
   },
   "11": {
     "name": "Douro",
+    "countryOfOrigin": "Portugal",
     "category": "featured",
     "winemaker": "Quinta Crastro",
     "tasteSummary": [
@@ -241,6 +272,8 @@
     "tastingNotes": "Chardonnay is a green-skinned grape variety used to make white wine. It originated in the Burgundy wine region of eastern France, but is now grown wherever wine is produced, from England to New Zealand.",
     "wineType": "White Wine",
     "alcoholByVolume": 13.5,
+    "price": 34.99,
+    "rating": "Better",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -249,6 +282,7 @@
   },
   "12": {
     "name": "Baer Ursa",
+    "countryOfOrigin": "United States",
     "category": "featured",
     "winemaker": "Columbia Valley",
     "tasteSummary": [
@@ -263,6 +297,8 @@
     "tastingNotes": "Cabernet Sauvignon is one of the world's most widely recognized red wine grape varieties. It is grown in nearly every major wine producing country among a diverse spectrum of climates from Canada's Okanagan Valley to Lebanon's Beqaa Valley",
     "wineType": "Red Wine",
     "alcoholByVolume": 14.5,
+    "price": 20.99,
+    "rating": "Best",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -271,6 +307,7 @@
   },
   "13": {
     "name": "Pomelo",
+    "countryOfOrigin": "United States",
     "category": "featured",
     "winemaker": "Vina Montes",
     "tasteSummary": [
@@ -286,6 +323,8 @@
     "tastingNotes": "Chardonnay is a green-skinned grape variety used to make white wine. It originated in the Burgundy wine region of eastern France, but is now grown wherever wine is produced, from England to New Zealand.",
     "wineType": "White Wine",
     "alcoholByVolume": 13.5,
+    "price": 34.99,
+    "rating": "Good",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -294,6 +333,7 @@
   },
   "14": {
     "name": "Rombauer",
+    "countryOfOrigin": "United States",
     "category": "featured",
     "winemaker": "Carneros",
     "tasteSummary": [
@@ -308,6 +348,8 @@
     "tastingNotes": "Cabernet Sauvignon is one of the world's most widely recognized red wine grape varieties. It is grown in nearly every major wine producing country among a diverse spectrum of climates from Canada's Okanagan Valley to Lebanon's Beqaa Valley",
     "wineType": "Red Wine",
     "alcoholByVolume": 14.5,
+    "price": 20.99,
+    "rating": "Good",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
@@ -316,6 +358,7 @@
   },
   "15": {
     "name": "Calera",
+    "countryOfOrigin": "United States",
     "category": "featured",
     "winemaker": "Central Coast",
     "tasteSummary": [
@@ -331,6 +374,8 @@
     "tastingNotes": "Chardonnay is a green-skinned grape variety used to make white wine. It originated in the Burgundy wine region of eastern France, but is now grown wherever wine is produced, from England to New Zealand.",
     "wineType": "White Wine",
     "alcoholByVolume": 13.5,
+    "price": 34.99,
+    "rating": "Good",
     "containerType": "Bottle",
     "bottleMaterial": "Glass",
     "productPhotos": [
