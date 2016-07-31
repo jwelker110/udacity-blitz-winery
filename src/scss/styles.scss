@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  background: #fffff0;
+  background: $ub-ivory;
   padding-top: 70px;
   font-family: 'Raleway', sans-serif;
 }
@@ -48,7 +48,7 @@ body {
   position: relative;
   width: 100%;
   height: 450px;
-  border-bottom: solid 2px #8CA93E;
+  border-bottom: solid 2px $ub-green;
 
   > .main-title {
     margin-top:0px;
@@ -57,7 +57,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fffff0;
+    color: $ub-ivory;
     font-size: 4em;
     width: 100%;
   }
@@ -73,7 +73,7 @@ body {
   width: 100%;
   padding: 5px;
   text-align: center;
-  color: #fffff0;
+  color: $ub-ivory;
 
   &-title {
 
@@ -107,7 +107,7 @@ body {
   background: rgba(0, 0, 0, .25);
 
   > p {
-    color: #fffff0;
+    color: $ub-ivory;
     font-size: 1.25em;
     top: 25%;
     position: absolute;
@@ -128,10 +128,29 @@ body {
 
 .btn {
   font-size: 1.1em;
-  border-width: 2px;
+  border: solid 2px $ub-ivory;
+  color: $ub-ivory;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
     border-color: initial;
+  }
+
+  &.ub-btn-red {
+    background-color: $ub-red;
+
+    &:hover {
+      background-color: rgba(125, 25, 33, .8);
+    }
+  }
+
+  &.ub-btn-green {
+    background-color: $ub-green;
+
+    &:hover {
+      background-color: rgba(140, 169, 62, 0.8);
+    }
   }
 }
 
