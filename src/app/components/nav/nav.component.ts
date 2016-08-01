@@ -1,6 +1,7 @@
-
 import {Component, OnInit} from "@angular/core";
 import {ROUTER_DIRECTIVES, Router, NavigationEnd} from "@angular/router";
+
+import {ShoppingCart} from "../../components/cart/cart.service";
 
 @Component({
     selector: 'ub-nav',
@@ -13,8 +14,9 @@ export class NavComponent implements OnInit {
     brand: string;
     to: any;
     isCollapsed: boolean = true;
+    shoppingCart: ShoppingCart;
 
-    constructor(private _routerService: Router){
+    constructor(private _routerService: Router, private _shoppingCart: ShoppingCart){
     }
 
     ngOnInit() {
@@ -25,6 +27,7 @@ export class NavComponent implements OnInit {
             {url: '/contact', name: 'Contact'}
         ];
         this.brand = 'U&B Winery';
+        this.shoppingCart = this._shoppingCart;
         this._routerService.events.subscribe((e) => {
             if(e instanceof NavigationEnd) {
                 window.scrollTo(0, 0);
