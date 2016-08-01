@@ -9,8 +9,21 @@
     <tbody>
         <tr *ngFor="let item of shoppingCart.items">
             <th class="cart-name" *ngIf="item">{{item.Product.name}}</th>
-            <th class="cart-quantity" *ngIf="item">{{item.Quantity}}</th>
-            <th class="cart-subtotal" *ngIf="item">$<span class="subtotal-container">{{item.subtotal()}}</span></th>
+            <th class="cart-quantity" *ngIf="item">
+                <form (submit)="shoppingCart.changeItemQuantity(item, quantity.value)">
+                    <a class="input-btn btn-left"
+                       (click)="shoppingCart.changeItemQuantity(item, item.Quantity - 1)">
+                        <span class="fa fa-minus"></span>
+                    </a>
+                    <input class="input-num" min="0" type="number" value="{{item.Quantity || 0}}"
+                           (blur)="shoppingCart.changeItemQuantity(item, quantity.value)" #quantity/>
+                    <a class="input-btn btn-right"
+                       (click)="shoppingCart.changeItemQuantity(item, item.Quantity + 1)">
+                        <span class="fa fa-plus"></span>
+                    </a>
+                </form>
+            </th>
+            <th class="cart-subtotal" *ngIf="item"><span class="subtotal-container">{{item.subtotal() | currency:'USD':true:'1.2-2'}}</span></th>
         </tr>
     </tbody>
 </table>
