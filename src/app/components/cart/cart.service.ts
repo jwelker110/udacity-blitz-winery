@@ -125,6 +125,7 @@ export class ShoppingCart {
     storeCart = () => {
         localStorage.setItem('ub-winery-cart', JSON.stringify(this.items));
         this.itemCount = this.getCartItemCount();
+        this.subtotal = this.getCartSubtotal();
     };
 
     /**
@@ -140,10 +141,13 @@ export class ShoppingCart {
                     this.items[index] = value;
                     return;
                 }
+                // we have to recreate these items because localStorage doesn't
+                // store the class metadata
                 this.items[index] = new CartItem(value.Product, value.Quantity);
             });
         }
         this.itemCount = this.getCartItemCount();
+        this.subtotal = this.getCartSubtotal();
     };
 
 }
