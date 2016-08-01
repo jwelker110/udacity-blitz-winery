@@ -152,6 +152,16 @@ body {
     &:hover {
       background-color: rgba(125, 25, 33, .8);
     }
+
+    &-inverted {
+      color: $ub-red;
+      border: solid 2px $ub-red;
+      background-color: $ub-ivory;
+
+      &:hover {
+        background-color: $ub-ivory;
+      }
+    }
   }
 
   &.ub-btn-green {
@@ -159,6 +169,16 @@ body {
 
     &:hover {
       background-color: rgba(140, 169, 62, 0.8);
+    }
+
+    &-inverted {
+      color: $ub-green;
+      border: solid 2px $ub-green;
+      background-color: $ub-ivory;
+
+      &:hover {
+        background-color: $ub-ivory;
+      }
     }
   }
 
