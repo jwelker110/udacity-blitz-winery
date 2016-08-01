@@ -27,11 +27,12 @@
 <div class="container">
     <div class="row">
         <div *ngFor="let product of wineModel.wines | products; let i = index">
-            <div class="col-sm-4 col-lg-3">
+            <div class="col-sm-6 col-md-4 col-lg-3">
                 <wine-detailed [wine]="product"></wine-detailed>
             </div>
-            <div *ngIf="i > 0 && (i+1) % 4 == 0" class="clearfix visible-lg-block"></div>
-            <div *ngIf="i > 0 && (i+1) % 3 == 0" class="clearfix visible-md-block"></div>
+            <div *ngIf="(i+1) % 4 == 0" class="clearfix visible-lg-block"></div>
+            <div *ngIf="(i+1) % 3 == 0" class="clearfix visible-md-block"></div>
+            <div *ngIf="(i+1) % 2 == 0" class="clearfix visible-sm-block"></div>
         </div>
     </div>
 </div>
