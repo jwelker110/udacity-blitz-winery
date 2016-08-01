@@ -38,7 +38,9 @@ body {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-
+/**
+ * Main background image for each page
+ */
 .bg-main {
   background-size: cover !important;
 }
@@ -126,6 +128,9 @@ body {
 
 }
 
+/**
+ * Custom buttons!
+ */
 .btn {
   font-size: 1.1em;
   border: solid 2px $ub-ivory;
@@ -135,6 +140,10 @@ body {
   &:focus {
     outline: none;
     border-color: initial;
+  }
+
+  &-small {
+    font-size: .8em;
   }
 
   &.ub-btn-red {
@@ -152,6 +161,69 @@ body {
       background-color: rgba(140, 169, 62, 0.8);
     }
   }
+
+  /**
+   * Buttons associated together hence the
+   * 'left' 'right'
+   */
+  &-left {
+    background-color: #7d1921;
+    margin-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+    &:hover {
+      cursor: pointer;
+      color: #fffff0;
+      background-color: rgba(125, 25, 33, .8);
+    }
+  }
+
+  &-right {
+    background-color: #8CA93E;
+    margin-left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    &:hover {
+      cursor: pointer;
+      color: #fffff0;
+      background-color: rgba(140, 169, 62, 0.8);
+    }
+  }
+}
+
+/**
+ * Barebones input
+ */
+.input {
+  &-num {
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    margin: 0;
+    border: none;
+    margin: auto -4px;
+    background-color: #fffff0;
+
+    &:focus {
+      outline: solid 1px #000;
+    }
+
+  }
+
+  &-btn {
+    color: #fffff0;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+.fa-plus,
+.fa-minus {
+  line-height: 35px;
 }
 
 @media screen and (min-width: 768px) {
