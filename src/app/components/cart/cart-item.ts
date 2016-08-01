@@ -8,10 +8,18 @@ export class CartItem {
         if(quantity <= 0) throw ("Invalid quantity.");
     }
 
-    subtotal = () => {
+    /**
+     * Calculate the subtotal value of this item
+     * @returns {number} - subtotal
+     */
+    subtotal = (): number => {
         return this.Product.price * this.Quantity;
     };
 
+    /**
+     * Change the quantity by the provided amount
+     * @param amt - positive or negative number to change the quantity by
+     */
     changeQuantityBy = (amt: number) => {
         amt = Math.round(amt);
         if(amt + this.Quantity < 0) {
