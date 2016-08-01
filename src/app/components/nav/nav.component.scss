@@ -55,6 +55,11 @@ $hover-transition: color .5s;
   transition: max-height .5s linear;
 }
 
+.nav-cart {
+  min-width: 75px;
+  text-align: center;
+}
+
 @media screen and (max-width: 767px) {
   .ub-collapse {
     max-height: 0;
