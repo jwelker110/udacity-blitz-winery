@@ -246,6 +246,48 @@ body {
   line-height: 35px;
 }
 
+/**
+ * Shopping cart style, but table style overall
+ */
+.ub {
+
+  &-table {
+    width: 100%;
+    margin: 20px auto;
+
+    th {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-middle {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+}
+
+/**
+ * Thanks, John - http://stackoverflow.com/questions/1264187/css-how-do-i-create-a-gap-between-rows-in-a-table
+ */
+table {
+  border-collapse: separate;
+  border-spacing: 0 1px;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   // this was acting weird on a large viewport and
   // displaying horizontal scrollbar
@@ -256,5 +298,6 @@ body {
 
 @media screen and (min-width: 992px) {
   body {
+    font-size: 18px;
   }
 }
