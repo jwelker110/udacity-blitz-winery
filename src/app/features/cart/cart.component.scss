@@ -13,10 +13,6 @@
   }
 }
 
-.subtotal-container {
-  width: 100px;
-  text-align: right;
-}
 
 .cart {
 
@@ -33,6 +29,20 @@
   }
 
 }
+
+/**
+ * Last row in the cart
+ */
+.total-row {
+  > td {
+    border-top: solid 2px #000;
+  }
+
+  >td:last-child {
+    border-top: solid 2px #000;
+  }
+}
+
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {

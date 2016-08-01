@@ -26,9 +26,9 @@
                                 </a>
                             </form>
                         </td>
-                        <td class="cart-subtotal ub-right" *ngIf="item"><span class="subtotal-container">{{item.subtotal() | currency:'USD':true:'1.2-2'}}</span></td>
+                        <td class="cart-subtotal ub-right" *ngIf="item">{{item.subtotal() | currency:'USD':true:'1.2-2'}}</td>
                     </tr>
-                    <tr>
+                    <tr class="total-row">
                         <td class="cart-name ub-left">Total:</td>
                         <td class="cart-quantity ub-middle">{{shoppingCart.itemCount}}</td>
                         <td class="cart-subtotal ub-right">{{shoppingCart.subtotal | currency:'USD':true:'1.2-2'}}</td>
