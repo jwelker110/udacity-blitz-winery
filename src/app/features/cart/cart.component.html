@@ -1,29 +1,40 @@
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Quantity</th>
-            <th>Subtotal</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of shoppingCart.items">
-            <th class="cart-name" *ngIf="item">{{item.Product.name}}</th>
-            <th class="cart-quantity" *ngIf="item">
-                <form (submit)="shoppingCart.changeItemQuantity(item, quantity.value)">
-                    <a class="input-btn btn-left"
-                       (click)="shoppingCart.changeItemQuantity(item, item.Quantity - 1)">
-                        <span class="fa fa-minus"></span>
-                    </a>
-                    <input class="input-num" min="0" type="number" value="{{item.Quantity || 0}}"
-                           (blur)="shoppingCart.changeItemQuantity(item, quantity.value)" #quantity/>
-                    <a class="input-btn btn-right"
-                       (click)="shoppingCart.changeItemQuantity(item, item.Quantity + 1)">
-                        <span class="fa fa-plus"></span>
-                    </a>
-                </form>
-            </th>
-            <th class="cart-subtotal" *ngIf="item"><span class="subtotal-container">{{item.subtotal() | currency:'USD':true:'1.2-2'}}</span></th>
-        </tr>
-    </tbody>
-</table>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <table class="ub-table">
+                <thead>
+                    <tr>
+                        <th class="ub-left">Name</th>
+                        <th class="ub-middle">Quantity</th>
+                        <th class="ub-right">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of shoppingCart.items; let i = index">
+                        <td class="cart-name ub-left" *ngIf="item">{{item.Product.name}}</td>
+                        <td class="cart-quantity ub-middle" *ngIf="item">
+                            <form (submit)="shoppingCart.changeItemQuantity(item, quantity.value)">
+                                <a class="input-btn btn-left"
+                                   (click)="shoppingCart.changeItemQuantity(item, item.Quantity - 1)">
+                                    <span class="fa fa-minus"></span>
+                                </a>
+                                <input class="input-num" min="0" tabindex="{{i+1}}" type="number" value="{{item.Quantity || 0}}"
+                                       (blur)="shoppingCart.changeItemQuantity(item, quantity.value)" #quantity/>
+                                <a class="input-btn btn-right"
+                                   (click)="shoppingCart.changeItemQuantity(item, item.Quantity + 1)">
+                                    <span class="fa fa-plus"></span>
+                                </a>
+                            </form>
+                        </td>
+                        <td class="cart-subtotal ub-right" *ngIf="item"><span class="subtotal-container">{{item.subtotal() | currency:'USD':true:'1.2-2'}}</span></td>
+                    </tr>
+                    <tr>
+                        <td class="cart-name ub-left">Total:</td>
+                        <td class="cart-quantity ub-middle">{{shoppingCart.itemCount}}</td>
+                        <td class="cart-subtotal ub-right">{{shoppingCart.subtotal | currency:'USD':true:'1.2-2'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
