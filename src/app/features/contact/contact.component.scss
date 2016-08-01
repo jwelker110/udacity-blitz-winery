@@ -1,3 +1,18 @@
+/**
+ * Sticky footer per https://css-tricks.com/snippets/css/sticky-footer/
+ */
+:host {
+  display: block;
+  min-height: 100%;
+  margin-bottom: -120px;
+
+  &:after {
+    content: ".";
+    display: block;
+    height: 120px;
+  }
+}
+
 #bg-contact {
   background: url('/public/img/stock_photos/bg-contact.png') no-repeat center;
 }

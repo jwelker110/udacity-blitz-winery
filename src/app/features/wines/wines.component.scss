@@ -3,6 +3,21 @@ $ub-black: #000;
 $ub-green: #8CA93E;
 $ub-red: #7d1921;
 
+/**
+ * Sticky footer per https://css-tricks.com/snippets/css/sticky-footer/
+ */
+:host {
+  display: block;
+  min-height: 100%;
+  margin-bottom: -120px;
+
+  &:after {
+    content: ".";
+    display: block;
+    height: 120px;
+  }
+}
+
 #bg-wines {
   background: url('/public/img/stock_photos/bg-wines.png') no-repeat center;
 }
