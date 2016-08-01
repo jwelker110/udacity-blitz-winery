@@ -7,15 +7,7 @@ import {Component, Input, Output, EventEmitter} from "@angular/core";
 })
 export class ModalComponent {
     @Input() show: boolean = false;
-    @Output() closed: EventEmitter<any> = new EventEmitter<any>();
 
     constructor() {}
-
-    /**
-     * Alert that the modal has been closed
-     */
-    modalClosed = () => {
-        this.closed.emit(true);
-    };
 
 }
