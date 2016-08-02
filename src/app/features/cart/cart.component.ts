@@ -1,10 +1,13 @@
 
 import {Component, OnInit} from "@angular/core";
+import {ROUTER_DIRECTIVES} from "@angular/router";
+
 import {ShoppingCart} from "../../components/cart/cart.service";
 
 @Component({
     templateUrl: './cart.component.html',
-    styles: [require('./cart.component.scss')]
+    styles: [require('./cart.component.scss')],
+    directives: [ROUTER_DIRECTIVES]
 })
 export class CartComponent implements OnInit {
     shoppingCart: ShoppingCart;
@@ -17,5 +20,9 @@ export class CartComponent implements OnInit {
         this.shoppingCart = this._shoppingCart;
     }
 
+    checkout = () => {
+        if(this.shoppingCart.itemCount < 1) {return;}
+        this.shoppingCart.resetCart();
+    };
 
 }
