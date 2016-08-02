@@ -120,6 +120,16 @@ export class ShoppingCart {
     };
 
     /**
+     * Remove all items from the cart and reset associated vars
+     */
+    resetCart = () => {
+        this.items = [];
+        this.itemCount = 0;
+        this.subtotal = 0.00;
+        this.storeCart();
+    };
+
+    /**
      * Store the contents of the cart using localStorage
      */
     storeCart = () => {
