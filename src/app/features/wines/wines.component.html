@@ -23,6 +23,19 @@
             <h3 class="content-title"><em>Wines for every occasion</em></h3>
         </div>
     </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <label for="quality">Quality:</label>
+                <select class="form-control" id="quality" (change)="wineModel.filterByRating(ratingSelect.value)" #ratingSelect>
+                    <option value="All">All</option>
+                    <option value="Good">Good</option>
+                    <option value="Better">Better</option>
+                    <option value="Best">Best</option>
+                </select>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container">
     <div class="row">
