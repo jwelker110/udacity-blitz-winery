@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 
-import {ContactForm} from "./contact.form";
+import {ContactForm} from "../../components/contact/contact.form";
 import { MapComponent } from "../../components/map/map.component";
 
 @Component({
