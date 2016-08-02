@@ -20,4 +20,14 @@ export class WinesComponent implements OnInit {
         // so we can bind to the model directly
         this.wineModel = this._wineModel;
     }
+
+    sortByPrice = (sortBy: string) => {
+        if(sortBy.toLowerCase() === 'lowest') {
+            this.wineModel.sortByPriceLowestToHighest();
+        } else if(sortBy.toLowerCase() === 'highest') {
+            this.wineModel.sortByPriceHighestToLowest();
+        } else {
+            this.wineModel.sortByNone();
+        }
+    };
 }
