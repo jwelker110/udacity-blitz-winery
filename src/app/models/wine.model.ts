@@ -42,9 +42,14 @@ export class WineModel {
     }
 
     filterByRating = (rating: string) => {
+        console.log(rating);
+        if(rating.toLowerCase() === 'all') {
+            this.wines = this._wines;
+            return;
+        }
         this.wines = this._wines.filter(function(value: ProductInterface, index: number, arr: ProductInterface[]) {
             return value.rating.toLowerCase() == rating.toLowerCase();
-        })
+        });
     };
 
     sortByPriceLowestToHighest = () => {
@@ -57,6 +62,10 @@ export class WineModel {
         this.wines.sort(function(a: ProductInterface, b: ProductInterface) {
             return a.price > b.price ? 1 : a.price < b.price ? -1 : 0;
         });
+    };
+
+    sortByNone = () => {
+        this.wines = this._wines;
     };
 
 
