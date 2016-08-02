@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+
 import {WinesService} from "../components/wine/wines.service";
 import {WineInterface} from "../components/wine/wine.interface";
 
@@ -7,7 +8,7 @@ export class WineModel {
     featuredWines: WineInterface[];
     wines: WineInterface[];
 
-    constructor(private _winesService: WinesService) {
+    constructor(private _winesService: WinesService, private _wines: WineInterface[]) {
         this.init()
     }
 
@@ -22,7 +23,15 @@ export class WineModel {
             });
         this._winesService.getWines()
             .then((wines) => {
-                this.wines = wines;
+                // converting from the object to
+                // an array of products
+                let keys: WineInterface[] = [];
+                for (let key in wines) {
+                    wines[key].key = key;
+                    keys.push(wines[key]);
+                }
+                this._wines = keys;
+                this.wines = keys;
             })
             .catch((err) => {
                 console.log(err);
