@@ -16,6 +16,14 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+h1, .h1 {
+  font-size: 2.6em;
+}
+
+h2, .h2 {
+
+}
+
 @keyframes loading {
   0% {
     opacity: 1;
@@ -38,6 +46,7 @@ body {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
 /**
  * Main background image for each page
  */
@@ -53,7 +62,7 @@ body {
   border-bottom: solid 2px $ub-green;
 
   > .main-title {
-    margin-top:0px;
+    margin-top: 0px;
     position: absolute;
     text-align: center;
     top: 50%;
@@ -82,7 +91,7 @@ body {
   }
 
   &-text {
-    font-size: 20px;
+    font-size: 1.25em;
   }
 }
 
@@ -126,6 +135,18 @@ body {
     transform: translateX(-50%);
   }
 
+}
+
+/**
+ * Anchor
+ */
+.ub-anchor {
+  color: #7d1921;
+
+  &:hover {
+    color: initial;
+    text-decoration: underline;
+  }
 }
 
 /**
