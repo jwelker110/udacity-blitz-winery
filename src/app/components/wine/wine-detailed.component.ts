@@ -1,9 +1,9 @@
-import {Component, Output, Input, EventEmitter} from "@angular/core";
+import {Component, Input} from "@angular/core";
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import {WineInterface} from './wine.interface';
 import { ArrayToStringPipe } from "../../pipes/array-string.pipe";
-import { ShoppingCart } from "../cart/cart.service";
+import { ShoppingCart } from "../../models/cart.model";
 import {ModalComponent} from "../modal/modal.component";
 import {ProductInterface} from "../cart/cart-item";
 

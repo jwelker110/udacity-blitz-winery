@@ -2,7 +2,7 @@
 import {Component, OnInit} from "@angular/core";
 import {ROUTER_DIRECTIVES} from "@angular/router";
 
-import {ShoppingCart} from "../../components/cart/cart.service";
+import {ShoppingCart} from "../../models/cart.model";
 
 @Component({
     templateUrl: './cart.component.html',

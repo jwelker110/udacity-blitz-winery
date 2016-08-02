@@ -10,7 +10,7 @@ import {FooterComponent} from "./components/footer/footer.component";
 import {WinesService} from "./components/wine/wines.service";
 import {PageNotFoundComponent} from "./features/notfound/notfound.component";
 import {WineModel} from "./models/wine.model";
-import {ShoppingCart} from "./components/cart/cart.service";
+import {ShoppingCart} from "./models/cart.model";
 import {CartComponent} from "./features/cart/cart.component";
 
 @Component({

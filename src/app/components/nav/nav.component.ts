@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {ROUTER_DIRECTIVES, Router, NavigationEnd} from "@angular/router";
 
-import {ShoppingCart} from "../../components/cart/cart.service";
+import {ShoppingCart} from "../../models/cart.model";
 
 @Component({
     selector: 'ub-nav',
