@@ -1,14 +1,14 @@
 import {Injectable} from '@angular/core';
-
 import {WinesService} from "../components/wine/wines.service";
-import {WineInterface} from "../components/wine/wine.interface";
+import {ProductInterface} from "../components/cart/cart-item";
 
 @Injectable()
 export class WineModel {
-    featuredWines: WineInterface[];
-    wines: WineInterface[];
+    featuredWines: ProductInterface[] = [];
+    wines: ProductInterface[] = [];
+    private _wines: ProductInterface[] = [];
 
-    constructor(private _winesService: WinesService, private _wines: WineInterface[]) {
+    constructor(private _winesService: WinesService) {
         this.init()
     }
 
@@ -16,26 +16,48 @@ export class WineModel {
         // grab featured wines and wines
         this._winesService.getFeaturedWines()
             .then((featured) => {
-                this.featuredWines = featured;
+                let keys: ProductInterface[] = [];
+                for (let key in featured) {
+                    featured[key].key = key;
+                    keys.push(featured[key]);
+                }
+                this.featuredWines = keys;
             })
             .catch((err) => {
                 console.log(err);
             });
         this._winesService.getWines()
             .then((wines) => {
-                // converting from the object to
-                // an array of products
-                let keys: WineInterface[] = [];
+                let keys: ProductInterface[] = [];
                 for (let key in wines) {
                     wines[key].key = key;
                     keys.push(wines[key]);
                 }
                 this._wines = keys;
-                this.wines = keys;
+                this.wines = this._wines;
             })
             .catch((err) => {
                 console.log(err);
             });
     }
+
+    filterByRating = (rating: string) => {
+        this.wines = this._wines.filter(function(value: ProductInterface, index: number, arr: ProductInterface[]) {
+            return value.rating.toLowerCase() == rating.toLowerCase();
+        })
+    };
+
+    sortByPriceLowestToHighest = () => {
+        this.wines.sort(function(a: ProductInterface, b: ProductInterface) {
+            return a.price > b.price ? 1 : a.price < b.price ? -1 : 0;
+        });
+    };
+
+    sortByPriceHighestToLowest = () => {
+        this.wines.sort(function(a: ProductInterface, b: ProductInterface) {
+            return a.price > b.price ? 1 : a.price < b.price ? -1 : 0;
+        });
+    };
+
 
 }
