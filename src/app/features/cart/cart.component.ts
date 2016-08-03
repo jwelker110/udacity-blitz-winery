@@ -28,10 +28,10 @@ export class CartComponent implements OnInit {
      * @param form
      */
     checkout = (form: any) => {
-        console.log(form);
         if(form.$invalid) {return;}
         if(this.shoppingCart.itemCount < 1) {return;}
         this.shoppingCart.resetCart();
+        this.setCheckingOut(false);
     };
 
     /**
