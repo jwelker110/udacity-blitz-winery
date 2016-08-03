@@ -34,7 +34,7 @@ export class WineModel {
                     keys.push(wines[key]);
                 }
                 this._wines = keys;
-                this.wines = this._wines;
+                this.wines = this._wines.slice();
             })
             .catch((err) => {
                 console.log(err);
@@ -42,12 +42,11 @@ export class WineModel {
     }
 
     filterByRating = (rating: string) => {
-        console.log(rating);
         if(rating.toLowerCase() === 'all') {
-            this.wines = this._wines;
+            this.wines = this._wines.slice();
             return;
         }
-        this.wines = this._wines.filter(function(value: ProductInterface, index: number, arr: ProductInterface[]) {
+        this.wines = this._wines.slice().filter(function(value: ProductInterface) {
             return value.rating.toLowerCase() == rating.toLowerCase();
         });
     };
@@ -60,12 +59,12 @@ export class WineModel {
 
     sortByPriceHighestToLowest = () => {
         this.wines.sort(function(a: ProductInterface, b: ProductInterface) {
-            return a.price > b.price ? 1 : a.price < b.price ? -1 : 0;
+            return a.price > b.price ? -1 : a.price < b.price ? 1 : 0;
         });
     };
 
     sortByNone = () => {
-        this.wines = this._wines;
+        this.wines = this._wines.slice();
     };
 
 
