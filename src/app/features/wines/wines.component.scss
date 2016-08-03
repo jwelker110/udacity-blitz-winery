@@ -21,3 +21,32 @@ $ub-red: #7d1921;
 #bg-wines {
   background: url('/public/img/stock_photos/bg-wines.png') no-repeat center;
 }
+
+
+/**
+ * form controls
+ */
+.ub-form {
+
+  &-group {
+    display: inline-block;
+    min-width: 49%;
+    text-align: center;
+  }
+
+  &-control {
+    display: inline-block;
+    width: auto;
+    background: $ub-ivory;
+    color: #000;
+    border: solid 1px $ub-green;
+    box-shadow: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+
+}

@@ -25,18 +25,20 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <div class="form-group">
+            <div class="form-group ub-form-group">
                 <label for="quality-filter">Filter by Quality:</label>
-                <select class="form-control" id="quality-filter" (change)="wineModel.filterByRating(ratingSelect.value)" #ratingSelect>
+                <select class="form-control ub-form-control" id="quality-filter"
+                        (change)="wineModel.filterByRating(ratingSelect.value)" #ratingSelect>
                     <option value="all">All</option>
                     <option value="good">Good</option>
                     <option value="better">Better</option>
                     <option value="best">Best</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group ub-form-group">
                 <label for="price-filter">Sort by Price:</label>
-                <select id="price-filter" class="form-control" (change)="sortByPrice(priceSortSelect.value)" #priceSortSelect>
+                <select id="price-filter" class="form-control ub-form-control"
+                        (change)="sortByPrice(priceSortSelect.value)" #priceSortSelect>
                     <option value="default">Default</option>
                     <option value="lowest">Lowest To Highest</option>
                     <option value="highest">Highest to Lowest</option>
