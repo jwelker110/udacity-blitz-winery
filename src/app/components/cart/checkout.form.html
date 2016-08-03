@@ -1,0 +1,48 @@
+<form (ngSubmit)="submitForm(checkoutForm)" *ngIf="!isSubmitted" #checkoutForm="ngForm">
+    <div class="form-group">
+        <label for="firstname">First Name:</label>
+        <input id="firstname" type="text" class="form-control" name="firstname" required #firstname/>
+    </div>
+    <div class="form-group">
+        <label for="lastname">Last Name:</label>
+        <input id="lastname" type="text" class="form-control" name="lastname" required #lastname/>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" class="form-control" name="email" required #email/>
+    </div>
+    <div class="form-group">
+        <label for="address">Street Address:</label>
+        <input id="address" type="text" class="form-control" name="address" required #address>
+    </div>
+    <div class="form-group">
+        <label for="city">City:</label>
+        <input id="city" type="text" class="form-control" name="city" required #city>
+    </div>
+    <div class="form-group">
+        <label for="state">State:</label>
+        <input id="state" type="text" class="form-control" name="state" required #state>
+    </div>
+    <div class="form-group">
+        <label for="zip">Zip Code:</label>
+        <input id="zip" type="text" class="form-control" name="zip" required #zip>
+    </div>
+    <div class="form-group">
+        <label for="creditcard">Credit Card #:</label>
+        <input id="creditcard" type="text" class="form-control" name="creditcard" required #creditCard>
+    </div>
+    <div class="form-group">
+        <label for="expire">Expires:</label>
+        <input id="expire" type="text" class="form-control" name="creditcard" required #expire>
+    </div>
+    <div class="form-group">
+        <label for="csc">CSC:</label>
+        <input id="csc" type="number" class="form-control" name="csc" required #csc>
+    </div>
+    <div class="form-submit-container">
+        <a class="btn ub-btn-red-inverted" (click)="cancelForm()">Cancel</a>
+        <button type="submit" class="btn ub-btn-green-inverted"
+                [disabled]="!checkoutForm.form.valid"
+                [ngClass]="{'ub-btn-green-inverted': checkoutForm.form.valid}">Checkout</button>
+    </div>
+</form>
