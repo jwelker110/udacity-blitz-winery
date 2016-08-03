@@ -14,6 +14,7 @@ export class CheckoutForm {
     constructor() {}
 
     submitForm = (form: any) => {
+        if(form.$invalid) {return;}
         this.submitted.emit(form);
         this.clearForm();
     };
