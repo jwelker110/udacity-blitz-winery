@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var autoprefixer = require('autoprefixer');
 var helpers = require('./helpers');
 
 var extractCSS = new ExtractTextPlugin('public/css/styles.css');
@@ -36,16 +37,20 @@ module.exports = {
                 include: [
                     helpers.root('src', 'scss')
                 ],
-                loader: extractCSS.extract(['raw-loader', 'sass-loader'])
+                loader: extractCSS.extract(['raw-loader', 'postcss-loader!sass-loader'])
             },
             {
                 test: /\.scss$/,
                 include: [
                     helpers.root('src', 'app')
                 ],
-                loader: 'raw-loader!sass-loader'
+                loader: 'raw-loader!postcss-loader!sass-loader'
             }
         ]
+    },
+
+    postcss: function () {
+        return [autoprefixer];
     },
 
     plugins: [
