@@ -13,17 +13,39 @@ export class CheckoutForm {
 
     constructor() {}
 
+    /**
+     * Submit the form, emit the event, and clear the form
+     * @param form - the form containing input values
+     */
     submitForm = (form: any) => {
         if(form.$invalid) {return;}
         this.submitted.emit(form);
-        this.clearForm();
+        this.clearForm(form);
     };
 
+    /**
+     * Emit the cancel event so the parent may close
+     * the form
+     */
     cancelForm = () => {
         this.cancelled.emit(true);
     };
 
-    clearForm = () => {
-
+    /**
+     * clear the form contents
+     * @param form
+     */
+    clearForm = (form: any) => {
+        form.firstname = '';
+        form.lastname = '';
+        form.email = '';
+        form.address = '';
+        form.addressTwo = '';
+        form.city = '';
+        form.state = '';
+        form.zip = '';
+        form.creditcard = '';
+        form.expire = '';
+        form.csc = null;
     };
 }

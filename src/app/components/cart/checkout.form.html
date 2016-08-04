@@ -3,34 +3,34 @@
         <h1>Billing Information</h1>
     </div>
     <div class="ub-form-half">
-        <input id="firstname" class="form-control" name="firstname" placeholder="First Name" required [(ngModel)]="checkoutForm.firstname" >
+        <input id="firstname" class="form-control" maxlength="30" name="firstname" placeholder="First Name" required [(ngModel)]="checkoutForm.firstname" >
     </div>
     <div class="ub-form-half">
-        <input id="lastname" class="form-control" name="lastname" placeholder="Last Name" required [(ngModel)]="checkoutForm.lastname" >
+        <input id="lastname" class="form-control" maxlength="30" name="lastname" placeholder="Last Name" required [(ngModel)]="checkoutForm.lastname" >
     </div>
     <div class="ub-form-full">
-        <input id="email" type="email" class="form-control" name="email" placeholder="Email" required [(ngModel)]="checkoutForm.email" >
+        <input id="email" type="email" class="form-control" maxlength="50" name="email" placeholder="Email" required [(ngModel)]="checkoutForm.email" >
     </div>
     <div class="ub-form-full">
-        <input id="address" class="form-control" name="address" placeholder="Address 1" required [(ngModel)]="checkoutForm.address">
+        <input id="address" class="form-control" maxlength="200" name="address" placeholder="Address 1" required [(ngModel)]="checkoutForm.address">
     </div>
     <div class="ub-form-full">
-        <input id="addressTwo" class="form-control" name="addressTwo" placeholder="Address 2" [(ngModel)]="checkoutForm.addressTwo" >
+        <input id="addressTwo" class="form-control" maxlength="200" name="addressTwo" placeholder="Address 2" [(ngModel)]="checkoutForm.addressTwo" >
     </div>
     <div class="ub-form-half">
-        <input id="city" class="form-control" name="city" placeholder="City" required [(ngModel)]="checkoutForm.city">
+        <input id="city" class="form-control" maxlength="120" name="city" placeholder="City" required [(ngModel)]="checkoutForm.city">
     </div>
     <div class="ub-form-quarter">
-        <input id="state" class="form-control" name="state" placeholder="State" required [(ngModel)]="checkoutForm.state" >
+        <input id="state" class="form-control" maxlength="2" name="state" placeholder="State" required [(ngModel)]="checkoutForm.state" >
     </div>
     <div class="ub-form-third">
-        <input id="zip" class="form-control" name="zip" placeholder="Zip" required [(ngModel)]="checkoutForm.zip" >
+        <input id="zip" class="form-control" maxlength="10" name="zip" placeholder="Zip" required [(ngModel)]="checkoutForm.zip" >
     </div>
     <div class="ub-form-full">
-        <input id="creditcard" class="form-control" name="creditcard" placeholder="Credit Card" required [(ngModel)]="checkoutForm.creditcard">
+        <input id="creditcard" type="number" class="form-control" name="creditcard" placeholder="Credit Card" required [(ngModel)]="checkoutForm.creditcard">
     </div>
     <div class="ub-form-third">
-        <input id="expire" class="form-control" name="expire" placeholder="Expires (MMYY)" required [(ngModel)]="checkoutForm.expire">
+        <input id="expire" type="number" class="form-control" name="expire" placeholder="Expires (MMYY)" required [(ngModel)]="checkoutForm.expire">
     </div>
     <div class="ub-form-third">
         <input id="csc" type="number" class="form-control" name="csc" placeholder="CSC" required [(ngModel)]="checkoutForm.csc">
