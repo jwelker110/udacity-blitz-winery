@@ -48,8 +48,8 @@
         <div class="col-sm-12">
             <h1 class="content-title">Featured Wines</h1>
         </div>
-        <div class="col-sm-4" *ngFor="let product of wineModel.featuredWines">
-            <wine-product [product]="product"></wine-product>
+        <div class="col-sm-4" *ngFor="let product of wineModel.featuredWines;">
+            <wine-detailed [wine]="product"></wine-detailed>
         </div>
     </div>
 </div>
