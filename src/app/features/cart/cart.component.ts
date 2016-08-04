@@ -42,4 +42,10 @@ export class CartComponent implements OnInit {
         this.isCheckingOut = isCheckingOut;
     };
 
+    keyPressed = ($event: any) => {
+        if($event.code == 'Escape') {
+            this.setCheckingOut(false);
+        }
+    };
+
 }
