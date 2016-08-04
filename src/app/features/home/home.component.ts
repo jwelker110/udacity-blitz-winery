@@ -1,14 +1,14 @@
 import {Component, OnInit} from "@angular/core";
 import {ROUTER_DIRECTIVES} from "@angular/router";
 
-import {WineComponent} from "../../components/wine/wine.component";
 import { ProductPipe } from "../../pipes/product.pipe";
 import { WineModel } from "../../models/wine.model";
+import {WineDetailedComponent} from "../../components/wine/wine-detailed.component";
 
 @Component({
     templateUrl: './home.component.html',
     styles: [require('./home.component.scss')],
-    directives: [WineComponent, ROUTER_DIRECTIVES],
+    directives: [WineDetailedComponent, ROUTER_DIRECTIVES],
     pipes: [ProductPipe]
 })
 export class HomeComponent implements OnInit {
