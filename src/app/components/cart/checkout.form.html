@@ -1,4 +1,7 @@
 <form (ngSubmit)="submitForm(checkoutForm)" *ngIf="!isSubmitted" #checkoutForm="ngForm">
+    <div class="ub-form-full text-center">
+        <h1>Billing Information</h1>
+    </div>
     <div class="ub-form-half">
         <input id="firstname" class="form-control" name="firstname" placeholder="First Name" required [(ngModel)]="checkoutForm.firstname" >
     </div>
@@ -17,7 +20,7 @@
     <div class="ub-form-half">
         <input id="city" class="form-control" name="city" placeholder="City" required [(ngModel)]="checkoutForm.city">
     </div>
-    <div class="ub-form-third">
+    <div class="ub-form-quarter">
         <input id="state" class="form-control" name="state" placeholder="State" required [(ngModel)]="checkoutForm.state" >
     </div>
     <div class="ub-form-third">

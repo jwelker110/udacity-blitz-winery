@@ -14,17 +14,22 @@ form {
 
     &-full {
       display: inline-block;
-      max-width: 100%;
+      width: 100%
     }
 
     &-half {
       display: inline-block;
-      min-width: 49.5%;
+      width: 49.5%;
     }
 
     &-third {
       display: inline-block;
-      max-width: 32.7%;
+      width: 32.7%;
+    }
+
+    &-quarter {
+      display: inline-block;
+      width: 24.8%;
     }
   }
 }
@@ -45,6 +50,33 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .ub {
+    &-form {
+
+      &-full {
+        display: inline-block;
+        min-width: 100%
+      }
+
+      &-half {
+        display: inline-block;
+        min-width: 100%;
+      }
+
+      &-third {
+        display: inline-block;
+        width: 49.4%;
+      }
+
+      &-quarter {
+        display: inline-block;
+        width: 49.4%;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
