@@ -17,6 +17,7 @@ export class WineModel {
         this._winesService.getFeaturedWines()
             .then((featured) => {
                 let keys: ProductInterface[] = [];
+                // here we convert the returned JSON object to an array of wines
                 for (let key in featured) {
                     featured[key].key = key;
                     keys.push(featured[key]);
@@ -29,6 +30,7 @@ export class WineModel {
         this._winesService.getWines()
             .then((wines) => {
                 let keys: ProductInterface[] = [];
+                // here we convert the returned JSON object to an array of wines
                 for (let key in wines) {
                     wines[key].key = key;
                     keys.push(wines[key]);
@@ -41,6 +43,10 @@ export class WineModel {
             });
     }
 
+    /**
+     * Filters out the wines that don't have the provided rating
+     * @param rating {string} - the desired rating of the wines
+     */
     filterByRating = (rating: string) => {
         if(rating.toLowerCase() === 'all') {
             this.wines = this._wines.slice();
@@ -51,18 +57,31 @@ export class WineModel {
         });
     };
 
+    /**
+     * Sorts the wines based on price, from lowest price to highest price, and then alphabetically
+     * ascending.
+     * If names are mixed lowercase and uppercase, this will affect the sort order.
+     */
     sortByPriceLowestToHighest = () => {
         this.wines.sort(function(a: ProductInterface, b: ProductInterface) {
-            return a.price > b.price ? 1 : a.price < b.price ? -1 : 0;
+            return a.price > b.price ? 1 : a.price < b.price ? -1 : a.name[0] > b.name[0] ? 1 : a.name[0] < b.name[0] ? -1 : 0;
         });
     };
 
+    /**
+     * Sorts the wines based on price, from highest price to lowest price, and then alphabetically
+     * ascending.
+     * If names are mixed lowercase and uppercase, this will affect the sort order.
+     */
     sortByPriceHighestToLowest = () => {
         this.wines.sort(function(a: ProductInterface, b: ProductInterface) {
-            return a.price > b.price ? -1 : a.price < b.price ? 1 : 0;
+            return a.price > b.price ? -1 : a.price < b.price ? 1 : a.name[0] > b.name[0] ? 1 : a.name[0] < b.name[0] ? -1 : 0;
         });
     };
 
+    /**
+     * Returns the wines to their default sorted positions
+     */
     sortByNone = () => {
         this.wines = this._wines.slice();
     };

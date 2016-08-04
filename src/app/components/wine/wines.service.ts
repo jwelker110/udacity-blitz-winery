@@ -23,7 +23,7 @@ export class WinesService {
     }
 
     _errorHandler(err: any) {
-        console.log(err); // todo provide better feedback
+        console.log(err);
         return Promise.reject(err);
     }
 

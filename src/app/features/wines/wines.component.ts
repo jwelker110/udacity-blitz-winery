@@ -21,6 +21,10 @@ export class WinesComponent implements OnInit {
         this.wineModel = this._wineModel;
     }
 
+    /**
+     * Sort by the price that was selected please
+     * @param sortBy {string} - the price to favor
+     */
     sortByPrice = (sortBy: string) => {
         if(sortBy.toLowerCase() === 'lowest') {
             this.wineModel.sortByPriceLowestToHighest();

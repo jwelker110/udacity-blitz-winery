@@ -28,6 +28,8 @@ export class NavComponent implements OnInit {
         ];
         this.brand = 'U&B Winery';
         this.shoppingCart = this._shoppingCart;
+        // so when the user navigates they need to be returned to the top of
+        // the page instead of the point they were at on the previous screen
         this._routerService.events.subscribe((e) => {
             if(e instanceof NavigationEnd) {
                 window.scrollTo(0, 0);
@@ -36,7 +38,10 @@ export class NavComponent implements OnInit {
         });
     }
 
-    // TODO NEED TO CHANGE THE TIMEOUT FN USED
+    /**
+     * The mobile navbar collapses as a result of this after the desired
+     * time expires.
+     */
     toggleCollapsed = () => {
         if(this.to) {clearTimeout(this.to)}
         this.isCollapsed = !this.isCollapsed;

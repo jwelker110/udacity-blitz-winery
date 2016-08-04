@@ -15,8 +15,15 @@ export class ContactForm {
     constructor() {
     }
 
-    submitForm() {
+    submitForm =(form: any) => {
+        this.clearForm(form);
         this.isSubmitted = true;
-    }
+    };
+
+    clearForm = (form: any) => {
+        form.name = '';
+        form.email = '';
+        form.msg = '';
+    };
 
 }

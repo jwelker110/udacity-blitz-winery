@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
+        // These are the icon classes to display in the footer :)
         this.faIcons = [
             {
                 iClass: 'fa fa-twitter-square',
