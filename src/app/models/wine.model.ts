@@ -37,6 +37,7 @@ export class WineModel {
                 }
                 this._wines = keys;
                 this.wines = this._wines.slice();
+                this.sortByNone();
             })
             .catch((err) => {
                 console.log(err);
@@ -80,10 +81,12 @@ export class WineModel {
     };
 
     /**
-     * Returns the wines to their default sorted positions
+     * Returns the wines to their default sorted positions (sorted by name)
      */
     sortByNone = () => {
-        this.wines = this._wines.slice();
+        this.wines.sort(function(a: ProductInterface, b: ProductInterface) {
+            return a.name > b.name ? 1 : a.name < b.name ? -1 : 0;
+        });
     };
 
 
