@@ -22,6 +22,17 @@ export class WinesComponent implements OnInit {
     }
 
     /**
+     * Filters and sorts the wines each time either a filter or sort
+     * is selected
+     * @param rating {string} - the rating to filter
+     * @param sortBy {string} - the sort direction
+     */
+    filterAndSort = (rating: string, sortBy:string) => {
+        this.wineModel.filterByRating(rating);
+        this.sortByPrice(sortBy);
+    };
+
+    /**
      * Sort by the price that was selected please
      * @param sortBy {string} - the price to favor
      */
