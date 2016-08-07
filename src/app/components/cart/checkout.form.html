@@ -1,44 +1,88 @@
-<form (ngSubmit)="submitForm(checkoutForm)" *ngIf="!isSubmitted" #checkoutForm="ngForm">
+<form (ngSubmit)="submitForm(checkoutForm)" *ngIf="!isSubmitted" [formGroup]="checkoutForm">
+    <div class="ub-form-full text-center">
+        <h1>Shipping Information</h1>
+    </div>
+    <div class="ub-form-full">
+        <input id="fullname" class="form-control" maxlength="30"
+               placeholder="Full Name" required [formControl]="checkoutForm.controls['fullname']">
+    </div>
+    <div class="ub-form-full">
+        <input id="email" type="email" class="form-control" maxlength="50"
+               placeholder="Email" required [formControl]="checkoutForm.controls['email']" >
+    </div>
+    <div class="ub-form-full">
+        <input id="address" class="form-control" maxlength="200"
+               placeholder="Address 1" required [formControl]="checkoutForm.controls['address']" >
+    </div>
+    <div class="ub-form-full">
+        <input id="addressTwo" class="form-control" maxlength="200"
+               placeholder="Address 2" [formControl]="checkoutForm.controls['addressTwo']" >
+    </div>
+    <div class="ub-form-half">
+        <input id="city" class="form-control" maxlength="120"
+               placeholder="City" required [formControl]="checkoutForm.controls['city']" >
+    </div>
+    <div class="ub-form-half">
+        <input id="state" class="form-control" maxlength="2"
+               placeholder="State/Province/Region" required [formControl]="checkoutForm.controls['state']" >
+    </div>
+    <div class="ub-form-half">
+        <input id="zip" class="form-control" maxlength="10"
+               placeholder="Zip" required [formControl]="checkoutForm.controls['zip']" >
+    </div>
+    <div class="ub-form-full text-center">
+        <div class="radio">
+            Different billing address?
+            <label><input type="radio" value="true" [formControl]="checkoutForm.controls['isBilling']" >Yes</label>
+            <label><input type="radio" checked="checked" value="" [formControl]="checkoutForm.controls['isBilling']" >No</label>
+        </div>
+    </div>
     <div class="ub-form-full text-center">
         <h1>Billing Information</h1>
     </div>
-    <div class="ub-form-half">
-        <input id="firstname" class="form-control" maxlength="30" name="firstname" placeholder="First Name" required [(ngModel)]="checkoutForm.firstname" >
-    </div>
-    <div class="ub-form-half">
-        <input id="lastname" class="form-control" maxlength="30" name="lastname" placeholder="Last Name" required [(ngModel)]="checkoutForm.lastname" >
+    <div *ngIf="checkoutForm.value.isBilling">
+        <div class="ub-form-full">
+            <input id="fullname-billing" class="form-control" maxlength="30"
+                   placeholder="Full Name" required [formControl]="checkoutForm.controls['fullnameBilling']" >
+        </div>
+        <div class="ub-form-full">
+            <input id="address-billing" class="form-control" maxlength="200"
+                   placeholder="Address 1" required [formControl]="checkoutForm.controls['addressBilling']" >
+        </div>
+        <div class="ub-form-full">
+            <input id="addressTwo-billing" class="form-control" maxlength="200"
+                   placeholder="Address 2" [formControl]="checkoutForm.controls['addressTwoBilling']" >
+        </div>
+        <div class="ub-form-half">
+            <input id="city-billing" class="form-control" maxlength="120"
+                   placeholder="City" required [formControl]="checkoutForm.controls['cityBilling']" >
+        </div>
+        <div class="ub-form-half">
+            <input id="state-billing" class="form-control" maxlength="2"
+                   placeholder="State/Province/Region" required [formControl]="checkoutForm.controls['stateBilling']" >
+        </div>
+        <div class="ub-form-half">
+            <input id="zip-billing" class="form-control" maxlength="10"
+                   placeholder="Zip" required [formControl]="checkoutForm.controls['zipBilling']" >
+        </div>
     </div>
     <div class="ub-form-full">
-        <input id="email" type="email" class="form-control" maxlength="50" name="email" placeholder="Email" required [(ngModel)]="checkoutForm.email" >
-    </div>
-    <div class="ub-form-full">
-        <input id="address" class="form-control" maxlength="200" name="address" placeholder="Address 1" required [(ngModel)]="checkoutForm.address">
-    </div>
-    <div class="ub-form-full">
-        <input id="addressTwo" class="form-control" maxlength="200" name="addressTwo" placeholder="Address 2" [(ngModel)]="checkoutForm.addressTwo" >
-    </div>
-    <div class="ub-form-half">
-        <input id="city" class="form-control" maxlength="120" name="city" placeholder="City" required [(ngModel)]="checkoutForm.city">
-    </div>
-    <div class="ub-form-quarter">
-        <input id="state" class="form-control" maxlength="2" name="state" placeholder="State" required [(ngModel)]="checkoutForm.state" >
+        <input id="creditcard" type="number" class="form-control"
+               placeholder="Credit Card" (blur)="validateCreditCardInput(checkoutForm.value)" required
+               [formControl]="checkoutForm.controls['creditcard']" >
     </div>
     <div class="ub-form-third">
-        <input id="zip" class="form-control" maxlength="10" name="zip" placeholder="Zip" required [(ngModel)]="checkoutForm.zip" >
-    </div>
-    <div class="ub-form-full">
-        <input id="creditcard" type="number" class="form-control" name="creditcard" placeholder="Credit Card" required [(ngModel)]="checkoutForm.creditcard">
+        <input id="expire" type="number" class="form-control"
+               placeholder="Expires (MMYY)" required [formControl]="checkoutForm.controls['exp']" >
     </div>
     <div class="ub-form-third">
-        <input id="expire" type="number" class="form-control" name="expire" placeholder="Expires (MMYY)" required [(ngModel)]="checkoutForm.expire">
-    </div>
-    <div class="ub-form-third">
-        <input id="csc" type="number" class="form-control" name="csc" placeholder="CSC" required [(ngModel)]="checkoutForm.csc">
+        <input id="csc" type="number" class="form-control"
+               placeholder="CSC" required [formControl]="checkoutForm.controls['csc']" >
     </div>
     <div class="form-submit-container">
         <a class="btn ub-btn-red-inverted" (click)="cancelForm()">Cancel</a>
         <button type="submit" class="btn ub-btn-green-inverted"
-                [disabled]="!checkoutForm.form.valid"
-                [ngClass]="{'ub-btn-green-inverted': checkoutForm.form.valid}">Checkout</button>
+                [disabled]="!checkoutForm.valid"
+                [ngClass]="{'ub-btn-green-inverted': checkoutForm.valid}">Checkout</button>
     </div>
 </form>
