@@ -1,12 +1,19 @@
 /**
  * Checkout form
  */
+#billing-checkbox {
+  min-width: 20px;
+  min-height: 20px;
+}
+
 form {
   margin: auto;
 }
 
 .form-submit-container {
   text-align: center;
+  margin-bottom: 22px;
+  margin-top: 11px;
 }
 
 .ub {
