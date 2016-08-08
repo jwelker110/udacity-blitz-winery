@@ -272,57 +272,6 @@ h3, .h3 {
 /**
  * Forms
  */
-form {
-  margin: auto;
-}
-
-.form-submit-container {
-  text-align: center;
-  margin-bottom: 22px;
-  margin-top: 11px;
-}
-
-.ub {
-  &-form {
-
-    &-full {
-      display: inline-block;
-      width: 100%
-    }
-
-    &-half {
-      display: inline-block;
-      width: 49.5%;
-    }
-
-    &-third {
-      display: inline-block;
-      width: 32.7%;
-    }
-
-    &-quarter {
-      display: inline-block;
-      width: 24.8%;
-    }
-  }
-}
-
-.form-control {
-  margin: 5px auto;
-}
-
-.ng-valid[required] {
-  border-left: 5px solid $ub-green; /* green */
-}
-
-.ng-invalid {
-  border-left: 5px solid $ub-red; /* red */
-}
-
-.input-error {
-  color: $ub-red;
-}
-
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
