@@ -2,7 +2,6 @@ import {Component, Output, OnInit} from "@angular/core";
 import {FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES, FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {EventEmitter} from "@angular/platform-browser-dynamic/src/facade/async";
 
-import {CreditCardValidator} from "../../validators/creditcard.validator";
 import {StatesModel} from "../../models/states.model";
 
 @Component({
@@ -36,7 +35,7 @@ export class CheckoutForm implements OnInit{
             'cityBilling': [''],
             'stateBilling': [''],
             'zipBilling': [''],
-            'creditcard': ['', Validators.compose([Validators.required, CreditCardValidator.validateCard])],
+            'creditcard': [''], // Add CreditCardValidator.validateCard to the validators here
             'exp': [''],
             'csc': ['']
         });
