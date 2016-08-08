@@ -1,29 +1,31 @@
-
-import {Component} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
+import {FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES, FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
     selector: 'contact-form',
     templateUrl: './contact.form.html',
-    styles: [require('./contact.form.scss')]
+    styles: [require('./contact.form.scss')],
+    directives: [FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES]
 })
-export class ContactForm {
+export class ContactForm implements OnInit {
     isSubmitted: boolean = false;
-    name: string;
-    email: string;
-    msg: string;
+    contactForm: FormGroup;
 
-    constructor() {
+    constructor(private _formBuilder: FormBuilder) {
+
+    }
+
+    ngOnInit() {
+        this.contactForm = this._formBuilder.group({
+            'name': [''],
+            'email': ['', Validators.compose([Validators.required, Validators.pattern('.+@.+')])],
+            'msg': ['']
+        });
     }
 
     submitForm =(form: any) => {
-        this.clearForm(form);
+        if(!form.valid) {return;}
         this.isSubmitted = true;
-    };
-
-    clearForm = (form: any) => {
-        form.name = '';
-        form.email = '';
-        form.msg = '';
     };
 
 }
