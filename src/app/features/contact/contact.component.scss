@@ -1,3 +1,11 @@
+#mapDiv {
+  max-width: 480px;
+}
+
+#bg-contact {
+  background: url('/public/img/stock_photos/bg-contact.png') no-repeat center;
+}
+
 /**
  * Sticky footer per https://css-tricks.com/snippets/css/sticky-footer/
  */
@@ -11,8 +19,4 @@
     display: block;
     height: 120px;
   }
-}
-
-#bg-contact {
-  background: url('/public/img/stock_photos/bg-contact.png') no-repeat center;
 }
