@@ -12,13 +12,14 @@ import {PageNotFoundComponent} from "./features/notfound/notfound.component";
 import {WineModel} from "./models/wine.model";
 import {ShoppingCart} from "./models/cart.model";
 import {CartComponent} from "./features/cart/cart.component";
+import {StatesModel} from "./models/states.model";
 
 @Component({
     selector: 'ub-app',
     templateUrl: './app.component.html',
     styles: [require('./app.component.scss')],
     directives: [NavComponent, FooterComponent, RouterOutlet],
-    providers: [WinesService, WineModel, ShoppingCart],
+    providers: [WinesService, WineModel, StatesModel, ShoppingCart],
     precompile: [HomeComponent, AboutComponent, ContactComponent, WinesComponent, PageNotFoundComponent, CartComponent]
 })
 export class AppComponent implements OnInit {

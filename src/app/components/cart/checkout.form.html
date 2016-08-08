@@ -28,9 +28,10 @@
                required [formControl]="checkoutForm.controls['city']" >
     </div>
     <div class="ub-form-half">
-        <label for="state">State/Province/Region</label>
-        <input id="state" class="form-control"
-               required [formControl]="checkoutForm.controls['state']" >
+        <label for="state">State</label>
+        <select id="state" class="form-control" required [formControl]="checkoutForm.controls['state']">
+            <option *ngFor="let state of statesModel.states" value="{{state.abbreviation}}">{{state.name}}</option>
+        </select>
     </div>
     <div class="ub-form-half">
         <label for="zip">Zip</label>
@@ -69,9 +70,10 @@
                    required [formControl]="checkoutForm.controls['cityBilling']" >
         </div>
         <div class="ub-form-half">
-            <label for="state-billing">State/Province/Region</label>
-            <input id="state-billing" class="form-control"
-                   required [formControl]="checkoutForm.controls['stateBilling']" >
+            <label for="state-billing">State</label>
+            <select id="state-billing" class="form-control" required [formControl]="checkoutForm.controls['stateBilling']">
+                <option *ngFor="let state of statesModel.states" value="{{state.abbreviation}}">{{state.name}}</option>
+            </select>
         </div>
         <div class="ub-form-half">
             <label for="zip-billing">Zip</label>
@@ -99,7 +101,7 @@
     </div>
     <div class="form-submit-container">
         <a class="btn ub-btn-red-inverted" (click)="cancelForm()">Cancel</a>
-        <button type="submit" class="btn ub-btn-green-inverted"
+        <button type="submit" class="btn"
                 [disabled]="!checkoutForm.valid"
                 [ngClass]="{'ub-btn-green-inverted': checkoutForm.valid}">Checkout</button>
     </div>

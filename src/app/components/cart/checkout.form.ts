@@ -1,9 +1,9 @@
 import {Component, Output, OnInit} from "@angular/core";
+import {FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES, FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {EventEmitter} from "@angular/platform-browser-dynamic/src/facade/async";
-import {FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES, FormBuilder, FormGroup} from "@angular/forms";
-import {Validators} from "@angular/common";
 
 import {CreditCardValidator} from "../../validators/creditcard.validator";
+import {StatesModel} from "../../models/states.model";
 
 @Component({
     selector: 'checkout-form',
@@ -15,8 +15,9 @@ export class CheckoutForm implements OnInit{
     @Output() submitted: EventEmitter<any> = new EventEmitter<any>();
     @Output() cancelled: EventEmitter<any> = new EventEmitter<any>();
     checkoutForm: FormGroup;
+    statesModel: StatesModel;
 
-    constructor(private _formBuilder: FormBuilder) {
+    constructor(private _formBuilder: FormBuilder, private _statesModel: StatesModel) {
     }
 
     ngOnInit() {
@@ -39,6 +40,7 @@ export class CheckoutForm implements OnInit{
             'exp': [''],
             'csc': ['']
         });
+        this.statesModel = this._statesModel;
     }
 
     /**
