@@ -1,5 +1,5 @@
 <form (ngSubmit)="submitForm(contactForm)" *ngIf="!isSubmitted" [formGroup]="contactForm">
-    <h1 class="content-title">Write Us</h1>
+    <h1 class="content-title">Write To Us</h1>
     <div class="form-group">
         <label for="name">Name</label>
         <input id="name" type="text" class="form-control" name="name"
@@ -16,6 +16,7 @@
                   required [formControl]="contactForm.controls['msg']"></textarea>
     </div>
     <div class="form-submit-container">
+        <p>NOTE: For demo purposes only! No information is captured or transmitted. Do not enter personal information.</p>
         <button type="submit" class="btn" [disabled]="!contactForm.valid" [ngClass]="{'ub-btn-green-inverted': contactForm.valid}">Submit</button>
     </div>
 </form>

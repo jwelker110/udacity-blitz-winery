@@ -100,6 +100,7 @@
                required [formControl]="checkoutForm.controls['csc']" >
     </div>
     <div class="form-submit-container">
+        <p>NOTE: For demo purposes only! No information is captured or transmitted. Do not enter personal information.</p>
         <a class="btn ub-btn-red-inverted" (click)="cancelForm()">Cancel</a>
         <button type="submit" class="btn"
                 [disabled]="!checkoutForm.valid"
