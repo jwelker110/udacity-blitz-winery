@@ -1,5 +1,12 @@
+$ub-green: #8CA93E;
+$ub-red: #7d1921;
+
 form {
   margin: auto;
+}
+
+.input-error {
+  color: $ub-red;
 }
 
 .form-submit-container {
@@ -7,11 +14,11 @@ form {
 }
 
 .ng-valid[required] {
-  border-left: 5px solid #8CA93E; /* green */
+  border-left: 5px solid $ub-green; /* green */
 }
 
 .ng-invalid {
-  border-left: 5px solid #7d1921; /* red */
+  border-left: 5px solid $ub-red; /* red */
 }
 
 @media screen and (max-width: 767px) {
