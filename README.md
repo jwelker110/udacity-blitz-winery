@@ -1,7 +1,5 @@
 # D2-Project-Web-L1
 
-Checkout the [live site](http://jwelker.com)
-
 The goal of this project was to transform an existing website, written in PHP, to a website written using AngularJS.
 
 ### Setting up the project
